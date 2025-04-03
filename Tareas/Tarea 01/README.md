@@ -25,7 +25,7 @@ Jira es un software de gestión de proyectos que fue lanzado en 2002 por Atlassi
 
 No obstante, Jira no es una única plataforma, sino que ofrece diferentes productos como: Jira Service Management, Jira Software, Jira Product Discovery y Jira Work Management. En lo que respecta al interés del curso, nos enfocaremos principalmente en destacar las diferencias de solo dos de ellos: Jira Software y Jira Work Management. En lo que respecta a los otros dos productos restantes, Jira Service Management se enfoca más en TI, soporte y atención al cliente, mientras que Jira Product Discovery se enfoca más en la planificación de ideas de productos, gestión de productos o marketing. [^2]
 
-Ahora bien, a modo de resumir los dos productos de interés, se presenta el siguiente cuadro comparativo [^2]
+Ahora bien, a modo de resumir los dos productos de interés, se presenta el siguiente cuadro comparativo: [^2]
 
 | | **Jira Software**                       | **Jira Work Management** |
 |----------------------------|----------------------------|------------|
@@ -38,7 +38,7 @@ Ahora bien, a modo de resumir los dos productos de interés, se presenta el sigu
 <!-- ==================================================================================================== -->
 <details>
 <summary> <strong> Funcionalidades </strong> </summary>
-Las funcionalidades de Jira pueden ser utilizadas en una serie de equipos, compañías y casos como:
+Las funcionalidades de Jira pueden ser utilizadas en una serie de equipos, compañías y casos como: [^3]
 
 -	**Jira para equipos con metodologías Agile**: Jira provee tableros Srum y Kanban con workflows personalizables; también genera reportes (burn-up/down charts, sprint reports, velocity charts) y timeline para mapear y dar seguimiento al progreso del proyecto.
 
@@ -50,8 +50,11 @@ Las funcionalidades de Jira pueden ser utilizadas en una serie de equipos, compa
 -	Jira para el seguimiento de bugs
 -	Jira para la gestión de requerimientos y casos de pruebas.
 
+<br>
 
-![Principales funcionalidades de Jira Work Managemente y Jira Software](images/esquema.png "Principales funcionalidades de Jira Work Managemente y Jira Software")
+![Principales funcionalidades de Jira Work Managemente y Jira Software](images/1_Jira.png "Principales funcionalidades de Jira Work Managemente y Jira Software")
+
+<br>
 
 
 No obstante, a continuación se resumen las características exclisivas que aportan cada uno de los productos de interés de Jira:
@@ -464,8 +467,31 @@ En resumen, las metodologías ágiles, el enfoque en datos, y la cultura de inno
 # Referencias
 
 ### Referencias
-### Referencias
 
 [^1]: "Agile Project Management Tools: A Brief Comparative View". Disponible en: [https://sciendo.com/pdf/10.2478/cait-2019-0033](https://sciendo.com/pdf/10.2478/cait-2019-0033)
 
 [^2]: "Jira Work Management VS Jira Software". Disponible en: [https://tecnofor.es/en/jira-work-management-vs-jira-software/](https://tecnofor.es/en/jira-work-management-vs-jira-software/)
+
+[^3]: "Jira for teams". Disponible en: [https://www.atlassian.com/software/jira/guides/getting-started/who-uses-jira#for-agile-teams](https://www.atlassian.com/software/jira/guides/getting-started/who-uses-jira#for-agile-teams)
+
+[^4]: "". Disponible en: []()
+
+[^4]: "". Disponible en: []()
+
+[^4]: "". Disponible en: []()
+
+[^4]: "". Disponible en: []()
+
+[^4]: "". Disponible en: []()
+
+[^4]: "". Disponible en: []()
+
+[^4]: "". Disponible en: []()
+
+[^4]: "". Disponible en: []()
+
+[^4]: "". Disponible en: []()
+
+[^4]: "". Disponible en: []()
+
+[^4]: "". Disponible en: []()
