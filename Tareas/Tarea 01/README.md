@@ -1,9 +1,9 @@
 # Tarea 1: Modelos ágiles y herramientas de gestión de proyectos en la industria del software
 
 ### Tabla de contenidos
-1. [Herramientas de gestion de proyectos de software](#herramientas-de-gestion-de-proyectos-de-software)
-2. [Marco teórico profundo de Scrum y Kanban](#marco-teorico-profundo-de-scrum-y-kanban)
-3. [Casos reales de aplicación en la industria](#casos-reales-de-aplicacion-en-la-industria)
+- [1. Herramientas de gestión de proyectos de software](#1-herramientas-de-gestión-de-proyectos-de-software)
+- [2. Marco teórico profundo de Scrum y Kanban](#2-marco-teórico-profundo-de-scrum-y-kanban)
+- [3. Casos reales de aplicación en la industria](#3-casos-reales-de-aplicación-en-la-industria)
 
 <br></br>
 
@@ -52,7 +52,9 @@ Las funcionalidades de Jira pueden ser utilizadas en una serie de equipos, compa
 
 <br>
 
-![Principales funcionalidades de Jira Work Managemente y Jira Software](images/1_Jira.png "Principales funcionalidades de Jira Work Managemente y Jira Software")
+| ![Principales funcionalidades de Jira Work Managemente y Jira Software](images/1_Jira.png "Principales funcionalidades de Jira Work Managemente y Jira Software") | 
+|:--:| 
+| *Fig 1. Principales funcionalidades de Jira Work Managemente y Jira Software* |
 
 <br>
 
@@ -69,13 +71,15 @@ No obstante, a continuación se resumen las características exclisivas que apor
 | On-call | - |
 |||
 
+<br>
+
 </details>
 
 
 <!-- ==================================================================================================== -->
 <details>
 <summary> <strong> En el contexto de metodologias agiles </strong></summary>
-En lo que respecta a metodologías agiles, Jira Software es la que explícitamente se considera un producto basado en ellas. Esto porque al momento de crear un nuevo proyecto ofrecen una serie de plantillas para su utilización y las cuales refleja el verdadero uso de metodologías agiles. Así para el caso de <strong>Jira Software</strong>, este ofrece las siguientes plantillas 
+En lo que respecta a metodologías agiles, Jira Software es la que explícitamente se considera un producto basado en ellas. Esto porque al momento de crear un nuevo proyecto ofrecen una serie de plantillas para su utilización y las cuales refleja el verdadero uso de metodologías agiles. Así para el caso de <strong>Jira Software</strong>, este ofrece las siguientes plantillas: [^2]
 
 <br>
 
@@ -86,15 +90,19 @@ En lo que respecta a metodologías agiles, Jira Software es la que explícitamen
 
 Así, Jira Software incluye dos tipos de tableros configurables: Kanban y Scrum, los cuales incluyen filtros, columnas de status, creación de *swimlanes*, identificadores para diferentes espacios. En lo que respecta a los timelines, estos pueden ser activados o desactivados y configurados por sprint (si trabajamos con Scrum) o por fechas.
 
-![Ejemplo Jira Software Agile](images/esquema.png "Plantillas para los diferentes equipos de Jira WOrk Management.")
+| ![Vista Jira Software](images/3_JiraSW_Agile.png "Vista Jira Software") | 
+|:--:| 
+| *Fig 2. Vista Jira Software* [^2] |
 
-En lo que respecta a Jira Work Management, existen más de 20 plantillas organizadas acorde a diferentes equipos de trabajo. En general, el board de Jira Work Management es mucho más sencillo, y aunque no se base explicitamente en un marco ágil, su estructura e implementación es muy similar al marco Kanban; siendo una versión más sencilla ya que no existen configuraciones complejas, debido a que solo pueden realizarse solo 3 acciones:
+En lo que respecta a Jira Work Management, existen más de 20 plantillas organizadas acorde a diferentes equipos de trabajo. En general, el board de Jira Work Management es mucho más sencillo, y aunque no se base explicitamente en un marco ágil, su estructura e implementación es muy similar al marco Kanban; siendo una versión más sencilla ya que no existen configuraciones complejas, debido a que solo pueden realizarse solo 3 acciones: [^2]
 
 -	Filtrar mediante configuraciones predefinidas por el board.
 -	Agrupar para ver fichas por status, prioridad, asignación o categoría.
 -	Personalizar los afiches para modificar la visualización de los campos que se quieren apreciar en cada uno de ellos.
 
-![Equipos Jira Work Managemente](images/esquema.png "Plantillas para los diferentes equipos de Jira WOrk Management.")
+| ![Vista Jira Work Management](images/4_JiraWM_Agile.png "Vista Jira Work Management") | 
+|:--:| 
+| *Fig 3. Vista Jira Work Managemente* [^2] |
 
 
 </details>
@@ -105,7 +113,8 @@ En lo que respecta a Jira Work Management, existen más de 20 plantillas organiz
 
 <details>
 <summary> <strong> Descripcion </strong> </summary>
-Azure DevOps, antes conocido como Microsoft Visual Studio Team Services (VSTS), es una de las herramientas más poderosas de gestión de proyectos, y contiene casi todas las funcionalidades requeridas para mantener un equipo Scrum, tablas Kanban flexibles, trazabilidad excepcional mediante un inventario, dashboards personalizables, tablas Scrum inherentes, integración extendida y client support de Git, todo hospedado en la nube. Esta herramienta hace posible manejar control de versiones para código, documentos de prueba y otros elementos de trabajo como escenarios, test de prueba, bugs y riesgos automáticos. Otras características importantes son el manejo de backlog, capacidad de gestión y una interfaz atractiva y de fácil uso. [1][]
+
+Azure DevOps, antes conocido como Microsoft Visual Studio Team Services (VSTS), es una de las herramientas más poderosas de gestión de proyectos, y contiene casi todas las funcionalidades requeridas para mantener un equipo Scrum, tablas Kanban flexibles, trazabilidad excepcional mediante un inventario, dashboards personalizables, tablas Scrum inherentes, integración extendida y client support de Git, todo hospedado en la nube. Esta herramienta hace posible manejar control de versiones para código, documentos de prueba y otros elementos de trabajo como escenarios, test de prueba, bugs y riesgos automáticos. Otras características importantes son el manejo de backlog, capacidad de gestión y una interfaz atractiva y de fácil uso. [^1][^4]
 
 <br>
 </details>
@@ -114,13 +123,15 @@ Azure DevOps, antes conocido como Microsoft Visual Studio Team Services (VSTS), 
 <details>
 <summary> <strong> Funcionalidades </strong> </summary>
 
+Entre sus funcionalidades se destacan: [^5][^6]
+
 - **Azure Repos:** Este es el lugar donde los equipos pueden almacenar el código fuente de sus aplicaciones. Microsoft ofrece repositorios privados de Git alojados en la nube para proyectos de desarrollo de software. Repos es un servicio dedicado que reemplaza la función de código en VSTS.
 
 - **Azure Pipelines:** Los desarrolladores pueden usar este servicio para orquestar un flujo de trabajo CI/CD para sus aplicaciones. Los equipos pueden conectar cualquier repositorio Git o GitHub a su pipeline y desplegar su código de manera continua a diferentes plataformas, incluyendo AWS y Google Cloud Platform. Este servicio ofrece la misma funcionalidad que la función "build and release" en VSTS.
 - **Azure Boards:** Este servicio permite a los equipos hacer seguimiento de su progreso con tableros Kanban, backlogs, paneles de control e informes personalizados. Anteriormente, VSTS ofrecía esta funcionalidad a través de la función "work".
 - **Azure Artifacts:** Con este servicio, los equipos pueden integrar más fácilmente paquetes en un Azure Pipeline. Artifacts ofrece soporte para feeds de paquetes Apache Maven, npm y NuGet desde fuentes públicas y privadas, al igual que lo hacía la función "packages" en VSTS.
 - **Azure Test Plans:** Este servicio es para pruebas planificadas y exploratorias de aplicaciones. Se integra con Azure Pipelines para habilitar pruebas automatizadas en los flujos de trabajo CI/CD. Los desarrolladores e ingenieros de operaciones que trabajaron con la función "test" en VSTS reconocerán la funcionalidad que ofrece Test Plans.
-- **Dashboards:** Azure DevOps ofrece una visión general y personalizada del estado de un proyecto. Permiten a los usuarios visualizar información clave, métricas de rendimiento y gráficos de una manera clara y estructurada.
+- **Dashboards:** Azure DevOps ofrece una visión general y personalizada del estado de un proyecto. Permiten a los usuarios visualizar información clave, métricas de rendimiento y gráficos de una manera clara y estructurada. [^7]
 
 <br>
 </details>
@@ -129,9 +140,19 @@ Azure DevOps, antes conocido como Microsoft Visual Studio Team Services (VSTS), 
 <summary> <strong> En el contexto de metodologias agiles </strong></summary>
 Azure DevOps se integra estrechamente con las metodologías ágiles al ofrecer herramientas que permiten a los equipos trabajar de manera ágil y flexible. Con Azure Boards, se pueden gestionar tareas, priorizar historias de usuario y realizar seguimientos de los sprints o flujos de trabajo, lo cual es fundamental para prácticas ágiles como Scrum y Kanban. En general Azure Boards ofrece opciones para gestionar tableros basados en:
 
+<br>
+
 - **Scrum:** Utilizando los backlogs y los tableros Scrum de Azure Boards, los equipos pueden planificar sprints, gestionar tareas y hacer un seguimiento del progreso del trabajo de manera eficiente.
 
+| ![Vista Jira Work Management](images/5_azure_sprint.png "Vista Jira Work Management") | 
+|:--:| 
+| *Fig 4. Configuración de Sprint en Scrum Azure DevOps* [^9] |
+
 - **Kanban:** Los tableros Kanban de Azure Boards permiten gestionar el flujo de trabajo visualmente, ayudando a los equipos a optimizar los tiempos de entrega y evitar cuellos de botella ya que permite establecer límites de WIP. 
+
+| ![Vista Jira Work Management](images/5_WIP.png "Vista Jira Work Management") | 
+|:--:| 
+| *Fig 5. WIP en Kanban Azure DevOps* [^8] |
 
 - **Scrumban:** Una combinación de Scrum y Kanban, que también se apoya en los tableros de Azure Boards para gestionar flujos de trabajo ágiles con flexibilidad.
 </details>
@@ -140,14 +161,16 @@ Azure DevOps se integra estrechamente con las metodologías ágiles al ofrecer h
 
 <details>
 <summary> <strong> Descripcion </strong> </summary>
-Github Projects es una herramienta incorporada dentro de la plataforma de GitHub, que permite planificar y mantener un historial y registro detallado del trabajo, mediante funcionalidad flexibles y adaptables. En lugar de aplicar una metodología específica, un proyecto proporciona características flexibles que puedes personalizar en función de las necesidades y los procesos del equipo. Así, el proyecto se puede visualizar como una hoja de cálculo, un panel de tareas o un roadmap. Además, la herramienta permite visualizar el avance del proyecto en diferentes vistas y genera sus resultados en base a la herramienta de GitHub Issues incorporada igualmente a la plataforma, por lo que su uso es de muy fácil acceso.
+
+Github Projects es una herramienta incorporada dentro de la plataforma de GitHub, que permite planificar y mantener un historial y registro detallado del trabajo, mediante funcionalidad flexibles y adaptables. En lugar de aplicar una metodología específica, un proyecto proporciona características flexibles que puedes personalizar en función de las necesidades y los procesos del equipo. Así, el proyecto se puede visualizar como una hoja de cálculo, un panel de tareas o un roadmap. Además, la herramienta permite visualizar el avance del proyecto en diferentes vistas y genera sus resultados en base a la herramienta de GitHub Issues incorporada igualmente a la plataforma, por lo que su uso es de muy fácil acceso. [^10][^11]
 
 <br>
 </details>
 
 <details>
 <summary> <strong> Funcionalidades </strong> </summary>
-Las funcionalidades de GitHub Projects son muy sencillas, y entre ellas se encuentran:
+
+Las funcionalidades de GitHub Projects son muy sencillas, y entre ellas se encuentran: [^11]
 
 -	**Actualizaciones del estado:** Los proyectos se construyen a partir de problemas y pull requests, creando referencias directas entre tu proyecto y el trabajo. La información se sincroniza automáticamente con tu proyecto y se actualizan vistas y gráficos. Los cambios en los problemas o pull requests también se reflejan en el proyecto.
 -	**Adición de metadatos a los ítems:** Puedes utilizar campos personalizados para agregar metadatos a los problemas, pull requests y borradores. Ejemplos incluyen campos de fecha (para fechas de envío), número (para la complejidad de tareas), selección única (para prioridad) y texto (para notas rápidas).
@@ -155,7 +178,7 @@ Las funcionalidades de GitHub Projects son muy sencillas, y entre ellas se encue
 -	**Visualización en diferentes perspectivas:** Los proyectos se pueden visualizar como una tabla de alta densidad, un tablero Kanban o una hoja de ruta estilo línea de tiempo. Las vistas personalizadas se pueden guardar y compartir con el equipo.
 
 
-Adicionalmente, la creación de un proyecto se ofrece en los siguientes formatos
+Adicionalmente, la creación de un proyecto se ofrece en los siguientes formatos: [^12]
 1.	**Tableros de proyectos propiedad del usuario:** Pueden contener problemas (issues) y pull requests de cualquier repositorio personal.
 2.	**Tableros de proyectos a nivel de organización:** Pueden contener problemas (issues) y pull requests de cualquier repositorio que pertenezca a una organización.
 3.	**Tableros de proyectos de repositorio:** Están limitados a problemas (issues) y pull requests dentro de un solo repositorio.
@@ -165,13 +188,17 @@ Adicionalmente, la creación de un proyecto se ofrece en los siguientes formatos
 
 <details>
 <summary> <strong> En el contexto de metodologias agiles </strong></summary>
-Como se mencionó anteriormente, GitHub Projects no impone una metodología específica, sino que ofrece una solución más flexible para adaptarse a las necesidades y a procesos del equipo. No obstante, con relación a las metodologías ágiles ofrece plantillas similares al marco de Kanban como:
+
+Como se mencionó anteriormente, GitHub Projects no impone una metodología específica, sino que ofrece una solución más flexible para adaptarse a las necesidades y a procesos del equipo. No obstante, con relación a las metodologías ágiles ofrece plantillas similares al marco de Kanban como: [^12]
 
 1.	**Kanban básico:** Permite un seguimiento de las tareas mediante las columnas: To do, In progress y Done.
 2.	**Kanban automatizado:** Las tarjetas (tareas con metadatos) se mueven automáticamente entre las columnas: To do, In progress y Done.
 3.	**Kanban automatizado con revisión:** Las tarjetas se mueven automáticamente entre las columnas: To do, In progress y Done, con triggers adicionales ante estados de revisión de pull request-
 4.	**Triage de errores:** Realiza el triage (evaluar y clasificar los errores o problemas reportados) y prioriza los errores con las columnas: To do, High priority, Low priority, and Closed.
 
+| ![Vista Kanban básica en GitHub Project](images/6_githubprojects_kanban.png "Vista Kanban básica en GitHub Project") | 
+|:--:| 
+| *Fig 6. Vista Kanban básica en GitHub Projects* [^12] |
 
 </details>
 
@@ -466,32 +493,31 @@ En resumen, las metodologías ágiles, el enfoque en datos, y la cultura de inno
 
 # Referencias
 
-### Referencias
-
 [^1]: "Agile Project Management Tools: A Brief Comparative View". Disponible en: [https://sciendo.com/pdf/10.2478/cait-2019-0033](https://sciendo.com/pdf/10.2478/cait-2019-0033)
 
 [^2]: "Jira Work Management VS Jira Software". Disponible en: [https://tecnofor.es/en/jira-work-management-vs-jira-software/](https://tecnofor.es/en/jira-work-management-vs-jira-software/)
 
 [^3]: "Jira for teams". Disponible en: [https://www.atlassian.com/software/jira/guides/getting-started/who-uses-jira#for-agile-teams](https://www.atlassian.com/software/jira/guides/getting-started/who-uses-jira#for-agile-teams)
 
-[^4]: "". Disponible en: []()
+[^4]: "Introducción a Visual Studio Team Services". Disponible en: [https://learn.microsoft.com/es-es/shows/level-up/introduction-to-visual-studio-team-services](https://learn.microsoft.com/es-es/shows/level-up/introduction-to-visual-studio-team-services)
 
-[^4]: "". Disponible en: []()
+[^5]: "Break down the main features of Azure DevOps Services". Disponible en: [https://www.techtarget.com/searchcloudcomputing/tip/Break-down-the-main-features-of-Azure-DevOps-Services](https://www.techtarget.com/searchcloudcomputing/tip/Break-down-the-main-features-of-Azure-DevOps-Services)
 
-[^4]: "". Disponible en: []()
+[^6]: "What is Azure DevOps?". Disponible en: [https://learn.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops](https://learn.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops)
 
-[^4]: "". Disponible en: []()
+[^7]: "Overview of services". Disponible en: [https://learn.microsoft.com/en-us/azure/devops/user-guide/services?view=azure-devops](https://learn.microsoft.com/en-us/azure/devops/user-guide/services?view=azure-devops)
 
-[^4]: "". Disponible en: []()
+[^8]: "Uso del panel". Disponible en: [https://learn.microsoft.com/es-es/azure/devops/boards/boards/kanban-quickstart?view=azure-devops](https://learn.microsoft.com/es-es/azure/devops/boards/boards/kanban-quickstart?view=azure-devops)
 
-[^4]: "". Disponible en: []()
+[^9]: "Implementación de procedimientos de Scrum para su equipo en Azure Boards
+". Disponible en: [https://learn.microsoft.com/es-es/azure/devops/boards/sprints/scrum-overview?view=azure-devops](https://learn.microsoft.com/es-es/azure/devops/boards/sprints/scrum-overview?view=azure-devops)
 
-[^4]: "". Disponible en: []()
+[^10]: "Planning and tracking with Projects". Disponible en: [https://docs.github.com/en/issues/planning-and-tracking-with-projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects)
 
-[^4]: "". Disponible en: []()
+[^11]: "About Projects". Disponible en: [https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 
-[^4]: "". Disponible en: []()
+[^12]: "Introduction to GitHub Projects and Project boards". Disponible en: [https://learn.microsoft.com/en-us/training/modules/plan-agile-github-projects-azure-boards/2-introduction-to-project-boards](https://learn.microsoft.com/en-us/training/modules/plan-agile-github-projects-azure-boards/2-introduction-to-project-boards)
 
-[^4]: "". Disponible en: []()
+[^13]: "". Disponible en: []()
 
-[^4]: "". Disponible en: []()
+[^14]: "". Disponible en: []()
