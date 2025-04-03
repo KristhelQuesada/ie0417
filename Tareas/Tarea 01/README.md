@@ -38,6 +38,7 @@ Ahora bien, a modo de resumir los dos productos de interés, se presenta el sigu
 <!-- ==================================================================================================== -->
 <details>
 <summary> <strong> Funcionalidades </strong> </summary>
+
 Las funcionalidades de Jira pueden ser utilizadas en una serie de equipos, compañías y casos como: [^3]
 
 -	**Jira para equipos con metodologías Agile**: Jira provee tableros Srum y Kanban con workflows personalizables; también genera reportes (burn-up/down charts, sprint reports, velocity charts) y timeline para mapear y dar seguimiento al progreso del proyecto.
@@ -59,7 +60,7 @@ Las funcionalidades de Jira pueden ser utilizadas en una serie de equipos, compa
 <br>
 
 
-No obstante, a continuación se resumen las características exclisivas que aportan cada uno de los productos de interés de Jira:
+No obstante, a continuación se resumen las características exclisivas que aportan cada uno de los productos de interés de Jira: [^3]
 | **Jira Software**                       | **JIra Work Management** |
 |----------------------------|------------|
 | Tableros (Kanban y Scrum, completamente configurables) | Tableros (solo uno basico)|
@@ -69,7 +70,6 @@ No obstante, a continuación se resumen las características exclisivas que apor
 | Seguridad | Overviews |
 | Deployments | Aprobaciones |
 | On-call | - |
-|||
 
 <br>
 
@@ -79,6 +79,7 @@ No obstante, a continuación se resumen las características exclisivas que apor
 <!-- ==================================================================================================== -->
 <details>
 <summary> <strong> En el contexto de metodologias agiles </strong></summary>
+
 En lo que respecta a metodologías agiles, Jira Software es la que explícitamente se considera un producto basado en ellas. Esto porque al momento de crear un nuevo proyecto ofrecen una serie de plantillas para su utilización y las cuales refleja el verdadero uso de metodologías agiles. Así para el caso de <strong>Jira Software</strong>, este ofrece las siguientes plantillas: [^2]
 
 <br>
@@ -103,7 +104,6 @@ En lo que respecta a Jira Work Management, existen más de 20 plantillas organiz
 | ![Vista Jira Work Management](images/4_JiraWM_Agile.png "Vista Jira Work Management") | 
 |:--:| 
 | *Fig 3. Vista Jira Work Managemente* [^2] |
-
 
 </details>
 
@@ -202,6 +202,8 @@ Como se mencionó anteriormente, GitHub Projects no impone una metodología espe
 
 </details>
 
+<br>
+
 ## 1.4. Resumen comparativo
 | Característica           | Jira                          | Azure DevOps                   | GitHub Projects               |
 |--------------------------|------------------------------|--------------------------------|--------------------------------|
@@ -226,55 +228,65 @@ Como se mencionó anteriormente, GitHub Projects no impone una metodología espe
 > - Ventajas y limitaciones de cada uno.
 > - Cuándo es más adecuado utilizar uno u otro.
 >
-> Se espera un análisis comparativo entre ambos marcos y una reexión sobre cómo podrían aplicarse
+> Se espera un análisis comparativo entre ambos marcos y una reflexión sobre cómo podrían aplicarse
 > en un proyecto estudiantil o real.
 
 ## 2.1. Scrum
 ### Historia y origen del enfoque
 <details>
-Scrum se ha convertido en uno de los marcos de trabajo ágiles más adoptados no solo en el desarrollo de software sino en diversas industrias. Esta metodología permite a equipos y organizaciones generar resultados de forma iterativa e incremental, adaptándose a requisitos cambiantes y fomentando la colaboración y la autoorganización. 
 
-Su origen inicia en 1986 cuando Takeuchi y Nonaka introducen el concepto de lo que hoy conocemos como Scrum en “The New New Product Development Game (1986)“, en donde equiparaban el proceso creativo con el rugby. El artículo describía un acercamiento basado en la escalabilidad y el trabajo en equipo que empresas como Honda, Canon y Fuji-Xerox habían utilizado para mejorar sus resultados; y adicionalmente, los autores también destacaron el papel que juegan los equipos autoorganizados y la gestión en el proceso de crecimiento.
-Posteriormente, en 1993 el término Scrum fue por primera vez introducido a equipos por los profesionales Jeff Sutherland, John Scumniotales, y Jeff McKenna de la corporación de Easel en aquel entonces. Ellos adaptaron sus ideas a partir del artículo de Takeuchi y Nonaka.
+Scrum se ha convertido en uno de los marcos de trabajo ágiles más adoptados no solo en el desarrollo de software sino en diversas industrias. Esta metodología permite a equipos y organizaciones generar resultados de forma iterativa e incremental, adaptándose a requisitos cambiantes y fomentando la colaboración y la autoorganización. [^13]
 
-El término siguió creciendo hasta que en 1995 el término fue expuesto al público por primera vez mediante el artículo “The Scrum development process”  del expositor Ken Schwaber en la conferencia OOPSLA en Austin, Texas. Simultáneamente, Kent Beck inició a desarrollar el marco de Extreme Programming (XP) con la ayuda de Sutherland y Schwaber para que ambos marcos pudiesen trabajar complementándose.
+Su origen inicia en 1986 cuando Takeuchi y Nonaka introducen el concepto de lo que hoy conocemos como Scrum en [*“The New New Product Development Game (1986)"*](https://www.thescrummaster.co.uk/wp-content/uploads/2016/09/The-New-New-Product-Development-Game.pdf)“, en donde equiparaban el proceso creativo con el rugby. El artículo describía un acercamiento basado en la escalabilidad y el trabajo en equipo que empresas como Honda, Canon y Fuji-Xerox habían utilizado para mejorar sus resultados, destacando la importancia los equipos autoorganizados y la gestión en el proceso de crecimiento. 
+
+Posteriormente, a partir del artículo de Takeuchi y Nonaka, en 1993 el término Scrum fue introducido por primera vez introducido a equipos por los profesionales Jeff Sutherland, John Scumniotales, y Jeff McKenna. El término siguió creciendo hasta que en 1995 el término fue expuesto al público por primera vez mediante el artículo [*"The Scrum development process"*](https://www.thescrummaster.co.uk/wp-content/uploads/2016/09/SCRUM-Development-Process-K-Schwaber.pdf)  del expositor Ken Schwaber en la conferencia OOPSLA en Austin, Texas. Simultáneamente, Kent Beck inició a desarrollar el marco de Extreme Programming (XP) con la ayuda de Sutherland y Schwaber para que ambos marcos pudiesen trabajar complementándose.
 
 La historia continúa cuando en 2001, se crea el Agile Manifesto propuesta por 17 colaboradores que observan la creciente demanda por una alternativa a los procesos de desarrollo de software complejos y basados en documentación. Este manifestó consta hasta la fecha de 4 valores y 12 principios, y sigue siendo la base de todo el desarrollo de software ágil hasta la actualidad, en donde Scrum se posiciona como un marco basado en una metodología ágil.
 
-En el inicio de la década de los 2000, diferentes organizaciones de consultoría, entrenamiento y certificaciones del marco Scrum fueron creadas. Primero en el 2002 con Mike Cohn, Esther Derby and Ken Schwaber creando Scrum Alliance y la certificación de Scrum Master (CSM). Luego en 2006 con Jeff Sutherland y su organización Scrum Inc. con servicios de consultoría y entrenamiento. Luego en 2009, con Ken Schwaber desertando Scrum Alliance y fundando Scrum.org para proveer una variedad de trainings.
-
-Finalmente, se puede decir que la historia de los fundamentos del marco Scrum finaliza en el 2010 cuando se publica la primera guía de Scrum gracias a los aportes de Ken Schwaber y Jeff Sutherland los cuales buscaban aclarar el concepto de Scrum. Dicha guía provee una serie de principios, roles, eventos y artefactos que conforman el marco, Desde eso, el acercamiento minimalista de Scrum fue muy bien recibido a globalmente, y hasta la fecha Schwaber y Sutherland mantienen actualizaciones constantes a la guía (actualmente 2010 [insertar guía]).
+En el inicio de la década de los 2000, diferentes organizaciones de consultoría, entrenamiento y certificaciones del marco Scrum fueron creadas. Y finalmente, se puede decir que la historia de los fundamentos del marco Scrum finaliza en el 2010 cuando se publica la primera guía de Scrum gracias a los aportes de Ken Schwaber y Jeff Sutherland los cuales buscaban aclarar el concepto de Scrum. Dicha guía provee una serie de principios, roles, eventos y artefactos que conforman el marco, Desde eso, el acercamiento minimalista de Scrum fue muy bien recibido a globalmente, y hasta la fecha Schwaber y Sutherland mantienen actualizaciones constantes a la guía (Versión actual [2020](https://www.thescrummaster.co.uk/scrum/scrum-papers-archive/)). [^13]
 </details>
 
 ### Principios fundamentales
 <details>
-1.	Transparencia: Comunicación abierta, continua y sincrónica de parte de todo el equipo para evitar cuellos de botella en la información y mejorar la colaboración. 
-2.	Reflexión: Revisiones frecuentes para evaluar avances, mejorar estimaciones y optimizar la planificación.
-3.	Adaptación: Flexibilidad para ajustar prioridades según las necesidades del cliente y cambios en el proyecto.
-Adicionalmente, Scrum plantea cinco valores fundamentales para los equipos de trabajo:
+
+Según la documentación oficial de Scrum [2020](https://www.thescrummaster.co.uk/scrum/scrum-papers-archive/), este marco cuenta con los siguientes principios fundamentales: [^14]
+
+1.	**Transparencia**: Comunicación abierta, continua y sincrónica de parte de todo el equipo para evitar cuellos de botella en la información y mejorar la colaboración. 
+2.	**Reflexión:** Revisiones frecuentes para evaluar avances, mejorar estimaciones y optimizar la planificación.
+3.	**Adaptación:** Flexibilidad para ajustar prioridades según las necesidades del cliente y cambios en el proyecto.
+
+
+Adicionalmente, Scrum plantea cinco valores fundamentales para los equipos de trabajo: [^14]
+
 1.	Compromiso con tareas y objetivos en plazos de tiempo.
 2.	Valentía al formular preguntas abiertas que pueden suponer retos pero que aumentan la honestidad y transparencia del proceso.
 3.	Concentración durante un tiempo determinado únicamente en las tareas del Product Backlog.
 4.	Actitud receptiva antes nuevas ideas, cambios y oportunidades.
 5.	Respeto hacia los diferentes miembros del equipo, fomentando la colaboración y cooperación.
+
 </details>
 
 
 ### Estructura de trabajo
 <details>
-#### Roles
+
+| ![Scrum workflow](images/7_scrum.png "Scrum workflow") | 
+|:--:| 
+| *Fig 7. Scrum workflow* [^19] |
+
+#### Roles [^14]
 1.	Product Owner: Prioriza necesidades, guía al equipo en qué desarrollar y decide la frecuencia de lanzamientos. Actúa como enlace entre negocio y desarrollo.
 
 2.	Scrum Master: Garantiza la correcta aplicación de Scrum, organiza recursos y eventos de cada Sprint, lidera la transformación digital y resuelve obstáculos externos.
 3.	Developers: Compuesto por testers, diseñadores especialistas en la experiencia de usuario, ingenieros de operaciones y desarrolladores. Estos equipos colaboran para completar Sprints, fomentando prácticas sostenibles y auto-organización. 
 
-#### Artefactos
+#### Artefactos [^14]
 1.	Product Backlog: Lista dinámica de tareas, mejoras y requisitos del proyecto, gestionada por el Product Owner. Se ajusta continuamente según prioridades y cambios del mercado.
 
 2.	Sprint Backlog: Selección de tareas del Product Backlog que el equipo debe completar en el Sprint actual. Es flexible y evoluciona durante el Sprint.
 3.	Incremento: Resultado tangible de cada Sprint que representa un avance del proyecto. Puede ser un producto listo para lanzamiento o una funcionalidad completa y probada.
 
-#### Eventos
+#### Eventos [^14]
 4.	Sprint planning: Se estima el trabajo a completar durante el siguiente sprint, definiendo objetivos específicos, medibles y viables.
 
 5.	Sprint: Periodo durante el cual el equipo de Scrum trabaja conjuntamente para la consecución de un incremento. Usualmente dura dos semanas, pero puede variar según las necesidades del proyecto. Se aconseja que entre más complejo sea el trabajo y más factores desconocidos haya, el periodo del Sprint debe ser más corto.
@@ -287,7 +299,9 @@ Adicionalmente, Scrum plantea cinco valores fundamentales para los equipos de tr
 
 ### Ventajas y limitaciones
 <details>
-| **Ventajas de Scrum** | **Limitaciones de Scrum** |
+
+
+| **Ventajas de Scrum** [^15][^16] | **Limitaciones de Scrum** [^15][^16] |
 |------------------------|---------------------------|
 | Permite completar proyectos de manera rápida y efectiva, debido a la priorización de tareas en periodos cortos de tiempo. | Puede conducir al fenómeno de scope creep, es decir, al crecimiento incontrolado del alcance del proyecto debido a la incertidumbre de un cierre definido. |
 | Proyectos grandes pueden ser divididos fácilmente en tareas más alcanzables. | El marco de trabajo puede ser desafiante en equipos grandes debido a que su implementación puede requerir de otros modelos más complejos como Scrum de Scrum. |
@@ -301,6 +315,9 @@ Adicionalmente, Scrum plantea cinco valores fundamentales para los equipos de tr
 
 ### ¿Cuándo es adecuado su uso?
 <details>
+
+Después de analizar las limitaciones de la metodología Scrum, podemos destacar que esta no siempre será factible, sino que esta sobresale sobre todo: [^17]
+
 1.	Cuando los requisitos no son claros: Cuando el cliente tiene una idea general del producto, pero no especificaciones claras, lo que dificulta estimaciones precisas. En este caso Scrum es completamente ajustable y flexible durante todo el proceso.
 
 2.	Cuando los cambios durante el desarrollo pueden ser muy probables: En proyectos donde los requisitos evolucionan constantemente debido a cambios en el negocio o la tecnología, Scrum facilita la adaptación continua.
@@ -317,14 +334,15 @@ Adicionalmente, Scrum plantea cinco valores fundamentales para los equipos de tr
 
 ### Historia y origen del enfoque
 <details>
-Kanban se originó a finales de la década de 1940 en Japón cuando Toyota buscaba una manera de mejorar sus procesos de ingeniería y producción. Uno de sus ingenieros, Taiichi Ohno, observó que los supermercados utilizaban un método de producción "pull", almacenando los artículos según la demanda prevista de los clientes para evitar tener demasiados productos en los estantes. Ohno se inspiró en esta técnica, que posteriormente desarrolló como producción "just-in-time" (JIT) e implementó en la fábrica de Toyota en 1953 como un enfoque temprano del Lean Manufacturing. El proceso Kanban fue el resultado de esta adaptación.
 
-"Kanban" es una palabra japonesa que se puede traducir como "tarjeta visible". Toyota utilizaba tarjetas físicas para indicar los distintos pasos de su proceso de fabricación. Estas tarjetas permitían a los miembros del equipo ver fácilmente qué se había completado y qué quedaba por hacer. No fue hasta principios de la década de 2000 que Kanban comenzó a consolidarse en la gestión de proyectos. A David J. Anderson se le atribuye a menudo ser el primero en implementar Kanban en el desarrollo de software en 2005. Su libro sobre Kanban, publicado en 2010, sigue siendo uno de los recursos más completos disponibles para proyectos centrados en la tecnología. Desde entonces, la metodología ágil Kanban ha seguido evolucionando para adaptarse a proyectos de todos los sectores y mercados.
+Kanban se originó a finales de la década de 1940 en Japón cuando Toyota buscaba una manera de mejorar sus procesos de ingeniería y producción. Uno de sus ingenieros, Taiichi Ohno, observó que los supermercados utilizaban un método de producción "pull", almacenando los artículos según la demanda prevista de los clientes para evitar tener demasiados productos en los estantes. Ohno se inspiró en esta técnica, que posteriormente desarrolló como producción "just-in-time" (JIT) e implementó en la fábrica de Toyota en 1953 como un enfoque temprano del Lean Manufacturing. El proceso Kanban fue el resultado de esta adaptación. [^18]
+
+"Kanban" es una palabra japonesa que se puede traducir como "tarjeta visible". Toyota utilizaba tarjetas físicas para indicar los distintos pasos de su proceso de fabricación. Estas tarjetas permitían a los miembros del equipo ver fácilmente qué se había completado y qué quedaba por hacer. No fue hasta principios de la década de 2000 que Kanban comenzó a consolidarse en la gestión de proyectos. A David J. Anderson se le atribuye a menudo ser el primero en implementar Kanban en el desarrollo de software en 2005. Su libro sobre Kanban, publicado en 2010, sigue siendo uno de los recursos más completos disponibles para proyectos centrados en la tecnología. Desde entonces, la metodología ágil Kanban ha seguido evolucionando para adaptarse a proyectos de todos los sectores y mercados. [^18]
 </details>
 
 ### Principios fundamentales
 <details>
-Inicialmente, Kanban propone una serie de principios fundamentales como:
+Inicialmente, Kanban propone una serie de principios fundamentales como: [^18]
 
 1.	Empezar ahora: Indica que la concentración debe estar puesta en lo que se está haciendo actualmente y fomenta la comprensión completa de los procesos existentes, incluyendo qué funciona y qué no.
 
@@ -334,7 +352,7 @@ Inicialmente, Kanban propone una serie de principios fundamentales como:
 
 4.	Fomentar el liderazgo: Este marco busca que las mejoras provengan de todos los niveles, con el fin de motivar a cada empleado a actuar como líder, sin importar su rol o título.
 
-Pero adicionalmente, se mencionan prácticas indispensables para que el marco sea implementado con éxtio como:
+Pero adicionalmente, se mencionan prácticas indispensables para que el marco sea implementado con éxito como: [^18]
 
 1.	Visualizar el flujo de trabajo: Para mantener una imagen clara de como el flujo de trabajo se ve de una etapa a la otra, es necesario el uso de tableros físicos o virtuales.
 
@@ -349,31 +367,48 @@ Pero adicionalmente, se mencionan prácticas indispensables para que el marco se
 
 ### Estructura de trabajo
 <details>
-A diferencia de muchas herramientas de gestión de proyectos que tienen una estructura rígida, los tableros Kanban están diseñados para ser flexibles. Estos fueron diseñados con el objetivo de personalizarse, modificarse e iterarse segun las necesidades del equipo o proyecto, con el fin único de reflejar el proceso y obtener puntos de mejora. Así, antes de comenzar a gestionar un proyecto bajo el marco de Kanban, es necesario es necesario tener en claro los siguientes conceptos:
+
+| ![kanban workflow](images/8_kanban.png "kanban workflow") | 
+|:--:| 
+| *Fig 8. Kanban workflow* [^20] |
+
+A diferencia de muchas herramientas de gestión de proyectos que tienen una estructura rígida, los tableros Kanban están diseñados para ser flexibles. Estos fueron diseñados con el objetivo de personalizarse, modificarse e iterarse segun las necesidades del equipo o proyecto, con el fin único de reflejar el proceso y obtener puntos de mejora. Así, antes de comenzar a gestionar un proyecto bajo el marco de Kanban, es necesario es necesario tener en claro los siguientes conceptos: [^21]
 
 -	Flujo: Es la secuencia completa de pasos por los que pasa una tarea desde su inicio hasta su finalización. Representa el proceso general de trabajo, desde la creación de una tarea hasta su entrega final.
 -	Columna (carriles verticales): Es una representación visual de cada etapa del flujo en el tablero Kanban. Cada columna corresponde a un paso específico dentro del flujo de trabajo.
 -	WIP limitado: Se refiere a la cantidad restringida de tareas que están en proceso (Work in Progress) dentro de cada etapa del flujo de trabajo en un momento dado. Se recomienda que cada columna tenga un WIP limitado para evitar la sobrecarga de trabajo y mejorar la eficiencia.
 
-Ahora, si bien se considera un tablero Kanban a un tablero físico o virtual con notas en él, no todos aquellos que cumplan con la descripción anterior caben dentro de la categoría de Kanban correctamente. Para ello, es necesario considerar que el uso y objetivo de estos elementos, por lo que se puede decir entonces que en un tablero Kanban:
+Ahora, si bien se considera un tablero Kanban a un tablero físico o virtual con notas en él, no todos aquellos que cumplan con la descripción anterior caben dentro de la categoría de Kanban correctamente. Para ello, es necesario considerar que el uso y objetivo de estos elementos, por lo que se puede decir entonces que en un tablero Kanban: [^21]
 - Hay carriles verticales que representan los pasos de un proceso.
 - Hay tarjetas (similares a notas adhesivas) que representan elementos de trabajo.
 - Las tarjetas se mueven a través del proceso de izquierda a derecha.
 
-Considerando solo estos tres elementos, depende de cada equipo o individuo decidir cómo utilizar el tablero, por ejemplo:
+Considerando solo estos tres elementos, depende de cada equipo o individuo decidir cómo utilizar el tablero, por ejemplo: [^21]
 
 - Se pueden agregar carriles verticales para representar pasos específicos del proceso.
 - Se pueden añadir carriles horizontales (swimlanes) para representar flujos de trabajo simultáneos y separar así los diferentes tipos de trabajos.
 - Se pueden personalizar detalles en las tarjetas, como tipos de tarjetas e íconos, para comunicar el tipo de trabajo, su estado o información relevante para el equipo.
 - Se pueden definir políticas de proceso para establecer claramente cómo deben moverse las tarjetas en el tablero.
 - Se pueden implementar límites de trabajo en progreso (WIP) para restringir proactivamente la cantidad de trabajo en curso en cada columna, traduciéndose en un limite máximo de tareas que pueden desarrollarse en un momento específico.
+
+Sin embargo, se puede decir que los pasos a seguir para estructurar correctamente un proyecto basado en Kanban son: [^22]
+
+1. Visualizar el flujo de trabajo en un tablero Kanban, físico o virtual.
+2. Estandarizar las etapas del flujo según las necesidades del equipo.
+3. Identificar bloqueos y dependencias para resolución rápida.
+4. Establecer límites WIP para optimizar el flujo.
+5. Fomentar la colaboración entre los miembros del equipo.
+6. Utilizar tarjetas Kanban con detalles clave sobre cada tarea.
+
 </details>
 
 
 
 ### Ventajas y limitaciones
+
 <details>
-| **Ventajas de Kanban** | **Limitaciones de Kanban** |
+
+| **Ventajas de Kanban** [^23][^24] | **Limitaciones de Kanban** [^23][^24]|
 |------------------------|---------------------------|
 | Representa visualmente el flujo de trabajo, lo que permite identificar cuellos de botella y fomentar la colaboración. | A diferencia de Scrum, Kanban no define roles ni procesos fijos, lo que puede generar confusión sin una gestión adecuada. |
 | Se ajusta fácilmente a cambios en prioridades y requisitos, facilitando la respuesta a interrupciones inesperadas. | Dificulta la estimación precisa del tiempo de finalización de tareas, lo que puede afectar la planificación del proyecto. |
@@ -384,7 +419,8 @@ Considerando solo estos tres elementos, depende de cada equipo o individuo decid
 
 ### ¿Cuando es adecuado su uso?
 <details>
-Kanban es una opción bien adaptada para equipos que priorizan la entrega continua sobre plazos fijos. Es especialmente ventajoso para proyectos pequeños o la gestión de proyectos en curso con tareas frecuentes y de menor escala, como correcciones de errores o solicitudes de mejora. En resumen, Kanban es adecuado cuando:
+
+Kanban es una opción bien adaptada para equipos que priorizan la entrega continua sobre plazos fijos. Es especialmente ventajoso para proyectos pequeños o la gestión de proyectos en curso con tareas frecuentes y de menor escala, como correcciones de errores o solicitudes de mejora. En resumen, Kanban es adecuado cuando: [^25]
 
 - Tu equipo maneja un flujo continuo de tareas entrantes.
 - No es necesario trabajar con plazos fijos para tareas o iteraciones.
@@ -394,6 +430,9 @@ Kanban es una opción bien adaptada para equipos que priorizan la entrega contin
 <br>
 
 ## 2.3 Cuadro comparativo
+
+A continuación se resumen las principales características de cada uno de los marcos: [^26]
+
 | Característica           | Scrum                                  | Kanban                              |
 |--------------------------|----------------------------------------|--------------------------------------|
 | **Enfoque principal**   | Iteraciones fijas (Sprints) y entregas después de cada sprint          | Flujo y entregas continuas de trabajo           |
@@ -424,24 +463,24 @@ Kanban es una opción bien adaptada para equipos que priorizan la entrega contin
 
 - **Marco de trabajo utilizado**
 
-IBM utiliza principalmente Scrum como su marco de trabajo ágil para el desarrollo de software y otros proyectos tecnológicos. También implementan otras prácticas ágiles como Kanban en algunos equipos para mejorar la visualización de los flujos de trabajo. IBM se ha comprometido a ser una organización ágil, tanto en desarrollo de software como en otras áreas, como las operaciones internas y la gestión de proyectos.
+IBM utiliza principalmente Scrum como su marco de trabajo ágil para el desarrollo de software y otros proyectos tecnológicos. También implementan otras prácticas ágiles como Kanban en algunos equipos para mejorar la visualización de los flujos de trabajo. IBM se ha comprometido a ser una organización ágil, tanto en desarrollo de software como en otras áreas, como las operaciones internas y la gestión de proyectos. [^27] [^28]
 
 - **Herramientas tecnológicas utilizadas**
 
-IBM hace uso de varias herramientas para gestionar sus proyectos ágiles, destacándose Jira y Confluence (ambas de Atlassian) para la gestión de tareas y la colaboración. Además, IBM Watson y herramientas internas de integración de procesos también son utilizados para mejorar la eficiencia del trabajo ágil dentro de sus equipos.
+IBM hace uso de varias herramientas para gestionar sus proyectos ágiles, destacándose Jira, Trello y Confluence (todas de Atlassian) para la gestión de tareas y la colaboración. Además, IBM Watson y herramientas internas de integración de procesos también son utilizados para mejorar la eficiencia del trabajo ágil dentro de sus equipos. [^29] [^30]
 
 - **Adaptación a su cultura organizacional**
 
-IBM tiene una cultura organizacional que favorece la innovación tecnológica, lo que facilita la implementación de metodologías ágiles. La compañía promueve la descentralización de decisiones, permitiendo que los equipos autónomos puedan tomar decisiones rápidamente. Esta mentalidad flexible es compatible con la implementación de prácticas ágiles, que permiten adaptarse rápidamente a los cambios en el mercado tecnológico.
+IBM tiene una cultura organizacional que favorece la innovación tecnológica, lo que facilita la implementación de metodologías ágiles. La compañía promueve la descentralización de decisiones, permitiendo que los equipos autónomos puedan tomar decisiones rápidamente. Esta mentalidad flexible es compatible con la implementación de prácticas ágiles, que permiten adaptarse rápidamente a los cambios en el mercado tecnológico. [^27] [^28]
 
 
 - **Beneficios**
 
-IBM ha visto mejoras en la colaboración entre equipos multidisciplinarios, la capacidad de entregar productos más rápido, y un enfoque más centrado en el cliente. Además, las metodologías ágiles han ayudado a mejorar la satisfacción del cliente debido a la mayor rapidez en la iteración y entrega de productos.
+IBM ha visto mejoras en la colaboración entre equipos multidisciplinarios, la capacidad de entregar productos más rápido, y un enfoque más centrado en el cliente. Además, las metodologías ágiles han ayudado a mejorar la satisfacción del cliente debido a la mayor rapidez en la iteración y entrega de productos. [^28]
 
 - **Retos**
 
-A pesar de la adopción de prácticas ágiles, IBM ha enfrentado desafíos en la integración de equipos ágiles en una empresa tan grande, con procesos y estructuras jerárquicas arraigadas. La resistencia al cambio es uno de los mayores obstáculos, y la implementación a gran escala a veces ha creado disparidades en la forma de trabajar entre diferentes departamentos.
+A pesar de la adopción de prácticas ágiles, IBM ha enfrentado desafíos en la integración de equipos ágiles en una empresa tan grande, con procesos y estructuras jerárquicas arraigadas. La resistencia al cambio es uno de los mayores obstáculos, y la implementación a gran escala a veces ha creado disparidades en la forma de trabajar entre diferentes departamentos. [^27]
 
 - **Reflexión**
 
@@ -454,27 +493,26 @@ El caso de IBM muestra cómo una empresa histórica puede adaptarse a metodolog�
 <details>
 - **Marco de trabajo utilizado**
 
-Amazon utiliza una combinación de metodologías ágiles, principalmente Scrum y Kanban. En cuanto a Scrum, emplean sprints estructurados para rastrear el progreso de los proyectos y mejorar la colaboración de los equipos de trabajo. Además, Amazon utiliza Kanban para visualizar flujos de trabajo y garantizar una ejecución continua desde la ideación hasta la entrega, asegurando que las tareas se realicen de manera eficiente sin cuellos de botella. También implementan prácticas de Lean Management y Six Sigma para optimizar los procesos y reducir el desperdicio, lo que refuerza el enfoque ágil.
+Amazon utiliza una combinación de metodologías ágiles, principalmente Scrum y Kanban. En cuanto a Scrum, emplean sprints estructurados para rastrear el progreso de los proyectos y mejorar la colaboración de los equipos de trabajo. Además, Amazon utiliza Kanban para visualizar flujos de trabajo y garantizar una ejecución continua desde la ideación hasta la entrega, asegurando que las tareas se realicen de manera eficiente sin cuellos de botella. También implementan prácticas de Lean Management y Six Sigma para optimizar los procesos y reducir el desperdicio, lo que refuerza el enfoque ágil. [^29]
 
 - **Herramientas tecnológicas utilizadas**
 
-Amazon utiliza una variedad de herramientas tecnológicas, incluidas algunas de sus propias soluciones. Algunas de las principales herramientas son:
+Amazon utiliza una variedad de herramientas tecnológicas, incluidas algunas de sus propias soluciones. Algunas de las principales herramientas son: [^29]
     1. Jira y Asana: Para la gestión de proyectos, seguimiento de tareas, y documentación colaborativa.
-    1. Slack: Para la comunicación en tiempo real entre los equipos distribuidos y para facilitar la colaboración.
-    1. Kanban Boards: Para visualizar el flujo de trabajo y las tareas a lo largo del proceso de desarrollo y ejecución.
+    2. Slack: Para la comunicación en tiempo real entre los equipos distribuidos y para facilitar la colaboración.
 
 - **Adaptación a su cultura organizacional**
 
-Amazon adapta las metodologías ágiles a su cultura organizacional promoviendo una estructura descentralizada y equipos autónomos. La regla de las dos pizzas (Two-Pizza Rule) asegura que los equipos sean lo suficientemente pequeños como para ser eficientes y ágiles, permitiendo que cada miembro tenga un alto nivel de responsabilidad y contribución. Además, la cultura organizacional de Amazon pone un fuerte énfasis en la obsesión por el cliente, lo que impulsa a los equipos a trabajar hacia resultados que prioricen las necesidades del cliente. La integración de PRFAQ (Press Release & Frequently Asked Questions) asegura que todos los miembros del equipo tengan claridad sobre los objetivos y la visión desde el principio, alineándose con la estrategia global de Amazon.
+Amazon adapta las metodologías ágiles a su cultura organizacional promoviendo una estructura descentralizada y equipos autónomos. La regla de las dos pizzas (Two-Pizza Rule) asegura que los equipos sean lo suficientemente pequeños como para ser eficientes y ágiles, permitiendo que cada miembro tenga un alto nivel de responsabilidad y contribución. Además, la cultura organizacional de Amazon pone un fuerte énfasis en la obsesión por el cliente, lo que impulsa a los equipos a trabajar hacia resultados que prioricen las necesidades del cliente. La integración de PRFAQ (Press Release & Frequently Asked Questions) asegura que todos los miembros del equipo tengan claridad sobre los objetivos y la visión desde el principio, alineándose con la estrategia global de Amazon. [^29]
 
 
-- **Beneficios**
+- **Beneficios** [^29]
 
     1. Escalabilidad: Gracias a su infraestructura basada en la nube (AWS), Amazon puede gestionar proyectos a una escala global, lo que facilita la expansión continua sin sacrificar la eficiencia operativa.
     1. Agilidad y flexibilidad: El uso de metodologías ágiles les permite adaptarse rápidamente a las necesidades cambiantes del mercado y a la retroalimentación de los clientes, lo que les da una ventaja competitiva.
     1. Innovación constante: Los equipos pequeños y autónomos permiten la innovación constante, sin las barreras burocráticas típicas de grandes corporaciones.
 
-- **Retos**
+- **Retos** [^29]
 
     1. Escalabilidad y complejidad: A medida que Amazon sigue creciendo, la gestión de proyectos a nivel global se hace cada vez más compleja, ya que implica coordinar a miles de empleados en diferentes ubicaciones.
     1. Altas expectativas de los clientes: Amazon debe cumplir con expectativas extremadamente altas de calidad y velocidad, lo que puede generar presión constante sobre los equipos.
@@ -484,9 +522,9 @@ Amazon adapta las metodologías ágiles a su cultura organizacional promoviendo 
 
 - **Reflexión**
 
-El caso de Amazon destaca la importancia de integrar la flexibilidad de las metodologías ágiles con estrategias a gran escala. A través de la implementación de herramientas avanzadas y el uso de datos para la toma de decisiones, Amazon demuestra cómo es posible optimizar procesos incluso en una organización de tamaño global. La obsesión por el cliente es clave: Amazon muestra que todo proyecto debe estar alineado con las expectativas y necesidades del cliente, lo que refuerza la importancia de mantener un enfoque centrado en el usuario durante todo el ciclo de vida del proyecto.
-Otra lección importante es el valor de equipos autónomos y pequeños, como se observa con la regla de las dos pizzas. Mantener equipos ágiles y bien enfocados no solo mejora la eficiencia, sino que también fomenta la innovación. A pesar de los retos asociados con la coordinación y la complejidad, la clave del éxito de Amazon está en su capacidad para adaptarse rápidamente a las circunstancias cambiantes y a las necesidades de los clientes.
-En resumen, las metodologías ágiles, el enfoque en datos, y la cultura de innovación son aspectos esenciales que otras empresas pueden adoptar para mejorar su gestión de proyectos, impulsar la eficiencia y mantenerse competitivas en un mercado global en constante cambio.
+El caso de Amazon resalta la importancia de combinar la flexibilidad de las metodologías ágiles con estrategias a gran escala. La empresa demuestra cómo optimizar procesos incluso a nivel global mediante la implementación de herramientas avanzadas y la toma de decisiones basada en datos. Un aspecto clave en su éxito es su enfoque centrado en el cliente, asegurándose de que cada proyecto esté alineado con las expectativas y necesidades del usuario, lo que refuerza la importancia de mantener este enfoque a lo largo de todo el ciclo de vida del proyecto.
+
+Además, Amazon destaca el valor de los equipos autónomos y pequeños, como se refleja en su famosa regla de las dos pizzas. Al mantener equipos ágiles y bien enfocados, no solo mejora la eficiencia, sino que también fomenta la innovación. A pesar de los desafíos asociados con la coordinación y la complejidad, la clave del éxito de Amazon radica en su capacidad para adaptarse rápidamente a las circunstancias cambiantes y a las necesidades de los clientes.
 </details>
 
 <br> <br>
@@ -518,6 +556,40 @@ En resumen, las metodologías ágiles, el enfoque en datos, y la cultura de inno
 
 [^12]: "Introduction to GitHub Projects and Project boards". Disponible en: [https://learn.microsoft.com/en-us/training/modules/plan-agile-github-projects-azure-boards/2-introduction-to-project-boards](https://learn.microsoft.com/en-us/training/modules/plan-agile-github-projects-azure-boards/2-introduction-to-project-boards)
 
-[^13]: "". Disponible en: []()
+[^13]: "The History of Scrum". Disponible en: [https://www.agile42.com/en/blog/scrum-history#:~:text=Scrum%2C%20as%20it%20is%20known,%E2%80%9CScrum%E2%80%9D%20was%20fully%20developed.](https://www.agile42.com/en/blog/scrum-history#:~:text=Scrum%2C%20as%20it%20is%20known,%E2%80%9CScrum%E2%80%9D%20was%20fully%20developed.)
 
-[^14]: "". Disponible en: []()
+[^14]: "¿En qué consiste Scrum?". Disponible en: [https://aws.amazon.com/what-is/scrum/](https://aws.amazon.com/what-is/scrum/)
+
+[^15]: "Scrum Project Management: Advantages and Disadvantages". Disponible en: [https://www.simplilearn.com/scrum-project-management-article](https://www.simplilearn.com/scrum-project-management-article)
+
+[^16]: "Scrum Methodology: Advantages, Disadvantages, and Ways of Handling Possible Issues". Disponible en: [https://www.epicflow.com/blog/the-scrum-framework-advantages-disadvantages-and-ways-of-handling-possible-issues/](https://www.epicflow.com/blog/the-scrum-framework-advantages-disadvantages-and-ways-of-handling-possible-issues/)
+
+[^17]: "When To Use Scrum?". Disponible en: [https://www.simpliaxis.com/resources/when-to-use-scrum](https://www.simpliaxis.com/resources/when-to-use-scrum)
+
+[^18]: "What Is Kanban Methodology? The Ultimate Guide". Disponible en: [https://www.wrike.com/kanban-guide/what-is-kanban/](https://www.wrike.com/kanban-guide/what-is-kanban/)
+
+[^19]: "What is Scrum?". Disponible en: [https://www.scrum.org/resources/what-scrum-module](https://www.scrum.org/resources/what-scrum-module)
+
+[^20]: "What is a Kanban Board?". Disponible en: [https://tcard.leantransitionsolutions.com/tcard-kanban-boards](https://tcard.leantransitionsolutions.com/tcard-kanban-boards)
+
+[^21]: "Why Use Kanban Boards?". Disponible en: [https://www.planview.com/resources/guide/introduction-to-kanban/use-kanban-boards/](https://www.planview.com/resources/guide/introduction-to-kanban/use-kanban-boards/)
+
+[^22]: "Kanban". Disponible en: [https://www.atlassian.com/agile/kanban](https://www.atlassian.com/agile/kanban)
+
+[^23]: "Pros & Cons of the Kanban Method in Project Management". Disponible en: [https://www.workamajig.com/blog/kanban-methodology-guide/pros-cons-kanban-method](https://www.workamajig.com/blog/kanban-methodology-guide/pros-cons-kanban-method)
+
+[^24]: "Kanban Methodology: Advantages and Disadvantages in Project Management". Disponible en: [https://www.agilefever.com/blog/Kanban-Methodology-Advantages-and-Disadvantages-in-Project-Management/](https://www.agilefever.com/blog/Kanban-Methodology-Advantages-and-Disadvantages-in-Project-Management/)
+
+[^25]: "Kanban vs Scrum: Which methodology is right for you?". Disponible en: [https://www.zoho.com/sprints/kanban-vs-scrum.html](https://www.zoho.com/sprints/kanban-vs-scrum.html)
+
+[^26]: "Scrum VS Kanban". Disponible en: [https://resources.scrumalliance.org/Article/scrum-vs-kanban](https://resources.scrumalliance.org/Article/scrum-vs-kanban)
+
+[^27]: "Agile Marketing Examples & Case Studies". Disponible en: [https://www.agilesherpas.com/blog/agile-marketing-examples-case-studies#:~:text=Teratada:%20Automated%20approvals%20and%20workflows,in%20a%20Swedish%20Success%20Story](https://www.agilesherpas.com/blog/agile-marketing-examples-case-studies#:~:text=Teratada:%20Automated%20approvals%20and%20workflows,in%20a%20Swedish%20Success%20Story)
+
+[^28]: "How IBM leveraged Jira Data Center to build a foundation for the future". Disponible en: [https://www.atlassian.com/blog/jira/how-ibm-built-a-future-with-jira-data-center](https://www.atlassian.com/blog/jira/how-ibm-built-a-future-with-jira-data-center)
+
+[^29]: "How to use IBM® App Connect with Confluence". Disponible en: [https://www.ibm.com/docs/en/app-connect/12.0?topic=apps-confluence](https://www.ibm.com/docs/en/app-connect/12.0?topic=apps-confluence)
+
+[^31]: "How to use IBM App Connect with Trello". Disponible en: [https://www.ibm.com/docs/en/app-connect/12.0?topic=apps-trello](https://www.ibm.com/docs/en/app-connect/12.0?topic=apps-trello)
+
+[^31]: "Amazon Project Management Best Practice". Disponible en: [https://www.projectmanagertemplate.com/post/amazon-project-management-best-practice#:~:text=Amazon%20incorporates%20Agile%20and%20Scrum,track%20progress%20and%20improve%20collaboration.](https://www.projectmanagertemplate.com/post/amazon-project-management-best-practice#:~:text=Amazon%20incorporates%20Agile%20and%20Scrum,track%20progress%20and%20improve%20collaboration.)
