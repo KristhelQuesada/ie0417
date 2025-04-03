@@ -342,6 +342,7 @@ Kanban se originó a finales de la década de 1940 en Japón cuando Toyota busca
 
 ### Principios fundamentales
 <details>
+
 Inicialmente, Kanban propone una serie de principios fundamentales como: [^18]
 
 1.	Empezar ahora: Indica que la concentración debe estar puesta en lo que se está haciendo actualmente y fomenta la comprensión completa de los procesos existentes, incluyendo qué funciona y qué no.
@@ -491,6 +492,7 @@ El caso de IBM muestra cómo una empresa histórica puede adaptarse a metodolog�
 
 ## 3.2. Amazon
 <details>
+
 - **Marco de trabajo utilizado**
 
 Amazon utiliza una combinación de metodologías ágiles, principalmente Scrum y Kanban. En cuanto a Scrum, emplean sprints estructurados para rastrear el progreso de los proyectos y mejorar la colaboración de los equipos de trabajo. Además, Amazon utiliza Kanban para visualizar flujos de trabajo y garantizar una ejecución continua desde la ideación hasta la entrega, asegurando que las tareas se realicen de manera eficiente sin cuellos de botella. También implementan prácticas de Lean Management y Six Sigma para optimizar los procesos y reducir el desperdicio, lo que refuerza el enfoque ágil. [^29]
@@ -590,6 +592,6 @@ Además, Amazon destaca el valor de los equipos autónomos y pequeños, como se 
 
 [^29]: "How to use IBM® App Connect with Confluence". Disponible en: [https://www.ibm.com/docs/en/app-connect/12.0?topic=apps-confluence](https://www.ibm.com/docs/en/app-connect/12.0?topic=apps-confluence)
 
-[^31]: "How to use IBM App Connect with Trello". Disponible en: [https://www.ibm.com/docs/en/app-connect/12.0?topic=apps-trello](https://www.ibm.com/docs/en/app-connect/12.0?topic=apps-trello)
+[^30]: "How to use IBM App Connect with Trello". Disponible en: [https://www.ibm.com/docs/en/app-connect/12.0?topic=apps-trello](https://www.ibm.com/docs/en/app-connect/12.0?topic=apps-trello)
 
 [^31]: "Amazon Project Management Best Practice". Disponible en: [https://www.projectmanagertemplate.com/post/amazon-project-management-best-practice#:~:text=Amazon%20incorporates%20Agile%20and%20Scrum,track%20progress%20and%20improve%20collaboration.](https://www.projectmanagertemplate.com/post/amazon-project-management-best-practice#:~:text=Amazon%20incorporates%20Agile%20and%20Scrum,track%20progress%20and%20improve%20collaboration.)
