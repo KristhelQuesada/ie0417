@@ -19,12 +19,13 @@
 ## 1.1. Jira
 <!-- ==================================================================================================== -->
 <details>
-<summary> <strong> Descripcion </strong> </summary>
-Jira es un software de gestión de proyectos que fue lanzado en 2002 por Atlassian, para profesionales de diseño institucional y de software. Su objetivo es permitir que equipos trabajen juntos de manera más eficiente al facilitar la colaboración entre los miembros del equipo, de tal forma que lleven un registro continuo del progreso del proyecto. Es una herramienta ampliamente utilizada en ambientes ágiles para asegurar una cultura colaborativa y flexible en los métodos de trabajo, y a su vez, responder al cambio de manera efectiva y rápida tanto en el entorno, como con los clientes y el mercado. Actualmente, es certificada como una de las herramientas más preferidas por empresas globalmente. [Agile Project Management Tools: A Brief Comprative View][1]
+<summary> <strong> Descripción </strong> </summary>
 
-No obstante, Jira no es una única plataforma, sino que ofrece diferentes productos como: Jira Service Management, Jira Software, Jira Product Discovery y Jira Work Management. En lo que respecta al interés del curso, nos enfocaremos principalmente en destacar las diferencias de solo dos de ellos: Jira Software y Jira Work Management. En lo que respecta a los otros dos productos restantes, Jira Service Management se enfoca más en TI, soporte y atención al cliente, mientras que Jira Product Discovery se enfoca más en la planificación de ideas de productos, gestión de productos o marketing.
+Jira es un software de gestión de proyectos que fue lanzado en 2002 por Atlassian, para profesionales de diseño institucional y de software. Su objetivo es permitir que equipos trabajen juntos de manera más eficiente al facilitar la colaboración entre los miembros del equipo, de tal forma que lleven un registro continuo del progreso del proyecto. Es una herramienta ampliamente utilizada en ambientes ágiles para asegurar una cultura colaborativa y flexible en los métodos de trabajo, y a su vez, responder al cambio de manera efectiva y rápida tanto en el entorno, como con los clientes y el mercado. Actualmente, es certificada como una de las herramientas más preferidas por empresas globalmente. [1]
 
-Ahora bien, a modo de resumir los dos productos de interés, se presenta el siguiente cuadro comparativo:
+No obstante, Jira no es una única plataforma, sino que ofrece diferentes productos como: Jira Service Management, Jira Software, Jira Product Discovery y Jira Work Management. En lo que respecta al interés del curso, nos enfocaremos principalmente en destacar las diferencias de solo dos de ellos: Jira Software y Jira Work Management. En lo que respecta a los otros dos productos restantes, Jira Service Management se enfoca más en TI, soporte y atención al cliente, mientras que Jira Product Discovery se enfoca más en la planificación de ideas de productos, gestión de productos o marketing. [2]
+
+Ahora bien, a modo de resumir los dos productos de interés, se presenta el siguiente cuadro comparativo [2]
 
 | | **Jira Software**                       | **Jira Work Management** |
 |----------------------------|----------------------------|------------|
@@ -462,33 +463,8 @@ En resumen, las metodologías ágiles, el enfoque en datos, y la cultura de inno
 
 # Referencias
 
-[1]: https://sciendo.com/pdf/10.2478/cait-2019-0033 "Agile Project Management Tools: A Brief Comprative View"
-[2]: 
-[3]: 
-[4]:
-[5]:
-[6]:
-[7]:
-[8]:
-[9]:
-[11]: 
-[10]: 
-[12]: 
-[13]: 
-[14]: 
-[15]: 
-[16]: 
-[17]: 
-[18]: 
-[19]: 
-[20]: 
-[21]: 
-[22]: 
-[23]: 
-[24]: 
-[25]: 
-[26]: 
-[27]: 
-[28]: 
-[29]: 
-[30]: 
+[1] "Agile Project Management Tools: A Brief Comprative View". Disponible en: https://sciendo.com/pdf/10.2478/cait-2019-0033
+
+[2] "Jira Work Management VS Jira Software". Disponible en: https://tecnofor.es/en/jira-work-management-vs-jira-software/
+
+[3]
