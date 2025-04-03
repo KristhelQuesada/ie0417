@@ -463,8 +463,8 @@ En resumen, las metodologías ágiles, el enfoque en datos, y la cultura de inno
 
 # Referencias
 
-[1] "Agile Project Management Tools: A Brief Comprative View". Disponible en: https://sciendo.com/pdf/10.2478/cait-2019-0033
+### Referencias
 
-[2] "Jira Work Management VS Jira Software". Disponible en: https://tecnofor.es/en/jira-work-management-vs-jira-software/
+[1]: "Agile Project Management Tools: A Brief Comparative View". Disponible en: [https://sciendo.com/pdf/10.2478/cait-2019-0033](https://sciendo.com/pdf/10.2478/cait-2019-0033)
 
-[3]
+[2]: "Jira Work Management VS Jira Software". Disponible en: [https://tecnofor.es/en/jira-work-management-vs-jira-software/](https://tecnofor.es/en/jira-work-management-vs-jira-software/)
