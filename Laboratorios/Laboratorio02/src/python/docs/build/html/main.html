@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>main module &#8212; documentación de Analizador de archivos sismologicos - 1.0</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=4936afed"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=f85f4cfb"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="src" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-main">
+<span id="main-module"></span><h1>main module<a class="headerlink" href="#module-main" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="main.Lector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">Lector</span></span><a class="reference internal" href="_modules/main.html#Lector"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Lector" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Clase encargada de leer archivos de sismos, procesar sus datos y brindar estadísticas.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Lector.abrir_archivo">
+<span class="sig-name descname"><span class="pre">abrir_archivo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Lector.abrir_archivo"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Lector.abrir_archivo" title="Link to this definition">¶</a></dt>
+<dd><p>Solicita al usuario el nombre del archivo y lo abre.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Archivo abierto en modo lectura</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>_io.TextIOWrapper</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Lector.calcular_promedio">
+<span class="sig-name descname"><span class="pre">calcular_promedio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">archivo</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Lector.calcular_promedio"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Lector.calcular_promedio" title="Link to this definition">¶</a></dt>
+<dd><p>Calcula el promedio de la intensidad de todos los sismos registrados en el archivo.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>archivo</strong> (<em>_io.TextIOWrapper</em>) – Archivo con los datos de los sismos</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Lector.controlador">
+<span class="sig-name descname"><span class="pre">controlador</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Lector.controlador"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Lector.controlador" title="Link to this definition">¶</a></dt>
+<dd><p>Controlador principal del programa. Administra el flujo de interacción con el usuario.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Lector.crear_vector">
+<span class="sig-name descname"><span class="pre">crear_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">archivo</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Lector.crear_vector"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Lector.crear_vector" title="Link to this definition">¶</a></dt>
+<dd><p>Crea el vector de objetos Sismo a partir del archivo abierto.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>archivo</strong> (<em>_io.TextIOWrapper</em>) – Archivo abierto que contiene los datos de los sismos</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Lector.get_promedio">
+<span class="sig-name descname"><span class="pre">get_promedio</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Lector.get_promedio"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Lector.get_promedio" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cadena con el promedio de intensidades de los sismos</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Lector.get_vector_sismos">
+<span class="sig-name descname"><span class="pre">get_vector_sismos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Lector.get_vector_sismos"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Lector.get_vector_sismos" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Vector con objetos de tipo Sismo leídos desde el archivo</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Lector.menu">
+<span class="sig-name descname"><span class="pre">menu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Lector.menu"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Lector.menu" title="Link to this definition">¶</a></dt>
+<dd><p>Muestra el menú principal y solicita al usuario una opción válida.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Opción seleccionada por el usuario</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Lector.retornar_max_sismo">
+<span class="sig-name descname"><span class="pre">retornar_max_sismo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">archivo</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Lector.retornar_max_sismo"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Lector.retornar_max_sismo" title="Link to this definition">¶</a></dt>
+<dd><p>Busca el sismo de mayor intensidad para una fecha específica ingresada por el usuario.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>archivo</strong> (<em>_io.TextIOWrapper</em>) – Archivo con los datos de los sismos</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Lector.solicitar_numero">
+<span class="sig-name descname"><span class="pre">solicitar_numero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mensaje</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Lector.solicitar_numero"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Lector.solicitar_numero" title="Link to this definition">¶</a></dt>
+<dd><p>Solicita al usuario un número entero válido mayor o igual a cero.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mensaje</strong> (<em>str</em>) – Texto que se mostrará al usuario como mensaje de entrada</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Número ingresado por el usuario</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="main.Sismo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">Sismo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identificacion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fecha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hora</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitud</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profundidad</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locacion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Sismo"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Sismo" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Clase que representa un sismo con sus características principales.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identificacion</strong> (<em>str</em>) – ID del sismo</p></li>
+<li><p><strong>fecha</strong> (<em>str</em>) – Fecha del sismo en formato YYYY-MM-DD</p></li>
+<li><p><strong>hora</strong> (<em>str</em>) – Hora del sismo</p></li>
+<li><p><strong>magnitud</strong> (<em>float</em>) – Magnitud del sismo en la escala de Richter</p></li>
+<li><p><strong>profundidad</strong> (<em>float</em>) – Profundidad del sismo en kilómetros</p></li>
+<li><p><strong>locacion</strong> (<em>str</em>) – Ubicación del epicentro</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Sismo.buscar_por_fecha">
+<span class="sig-name descname"><span class="pre">buscar_por_fecha</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">anio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dia</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Sismo.buscar_por_fecha"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Sismo.buscar_por_fecha" title="Link to this definition">¶</a></dt>
+<dd><p>Verifica si el sismo ocurrió en una fecha específica.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>anio</strong> (<em>int</em>) – Año a buscar</p></li>
+<li><p><strong>mes</strong> (<em>int</em>) – Mes a buscar</p></li>
+<li><p><strong>dia</strong> (<em>int</em>) – Día a buscar</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>True si la fecha coincide, False en caso contrario</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Sismo.calcular_intensidad">
+<span class="sig-name descname"><span class="pre">calcular_intensidad</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Sismo.calcular_intensidad"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Sismo.calcular_intensidad" title="Link to this definition">¶</a></dt>
+<dd><p>Calcula la intensidad del sismo como magnitud/profundidad.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Sismo.fix_fechaError">
+<span class="sig-name descname"><span class="pre">fix_fechaError</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Sismo.fix_fechaError"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Sismo.fix_fechaError" title="Link to this definition">¶</a></dt>
+<dd><p>Corrige el formato de la fecha si el mes tiene un cero a la izquierda.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Sismo.get_fecha">
+<span class="sig-name descname"><span class="pre">get_fecha</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Sismo.get_fecha"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Sismo.get_fecha" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Fecha del sismo</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Sismo.get_hora">
+<span class="sig-name descname"><span class="pre">get_hora</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Sismo.get_hora"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Sismo.get_hora" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Hora del sismo</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Sismo.get_intensidad">
+<span class="sig-name descname"><span class="pre">get_intensidad</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Sismo.get_intensidad"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Sismo.get_intensidad" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Intensidad calculada del sismo</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Sismo.get_locacion">
+<span class="sig-name descname"><span class="pre">get_locacion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Sismo.get_locacion"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Sismo.get_locacion" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Locación del sismo</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Sismo.get_magnitud">
+<span class="sig-name descname"><span class="pre">get_magnitud</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Sismo.get_magnitud"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Sismo.get_magnitud" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Magnitud del sismo</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Sismo.get_profundidad">
+<span class="sig-name descname"><span class="pre">get_profundidad</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Sismo.get_profundidad"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Sismo.get_profundidad" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Profundidad del sismo</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Sismo.get_vector">
+<span class="sig-name descname"><span class="pre">get_vector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Sismo.get_vector"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Sismo.get_vector" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Vector con la información del sismo</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Sismo.hacer_vector">
+<span class="sig-name descname"><span class="pre">hacer_vector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Sismo.hacer_vector"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.Sismo.hacer_vector" title="Link to this definition">¶</a></dt>
+<dd><p>Crea un vector con los datos principales del sismo.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.main">
+<span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#main"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.main" title="Link to this definition">¶</a></dt>
+<dd><p>Función principal del programa.</p>
+<p>Se encarga de iniciar la ejecución del sistema sismológico,
+creando una instancia de la clase <cite>Lector</cite> y llamando al controlador
+principal para gestionar el flujo del programa.</p>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Analizador de archivos sismologicos</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">src</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">main module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">src</a><ul>
+      <li>Previous: <a href="modules.html" title="capítulo anterior">src</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Kristhel Quesada.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/main.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main &#8212; documentación de Analizador de archivos sismologicos - 1.0</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=4936afed"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Código fuente para main</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -------------------------------------------------------------------------</span>
+<span class="c1"># Examen Parcial II: Principios de informática</span>
+<span class="c1"># Kristhel Daniela Quesada López, C06153</span>
+<span class="c1"># Prof. Dany Vargas</span>
+<span class="c1"># Algoritmo: Lector de archivos sismológicos</span>
+<span class="c1"># -------------------------------------------------------------------------</span>
+
+<div class="viewcode-block" id="Sismo">
+<a class="viewcode-back" href="../main.html#main.Sismo">[documentos]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Sismo</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Clase que representa un sismo con sus características principales.</span>
+
+<span class="sd">    :param identificacion: ID del sismo</span>
+<span class="sd">    :type identificacion: str</span>
+<span class="sd">    :param fecha: Fecha del sismo en formato YYYY-MM-DD</span>
+<span class="sd">    :type fecha: str</span>
+<span class="sd">    :param hora: Hora del sismo</span>
+<span class="sd">    :type hora: str</span>
+<span class="sd">    :param magnitud: Magnitud del sismo en la escala de Richter</span>
+<span class="sd">    :type magnitud: float</span>
+<span class="sd">    :param profundidad: Profundidad del sismo en kilómetros</span>
+<span class="sd">    :type profundidad: float</span>
+<span class="sd">    :param locacion: Ubicación del epicentro</span>
+<span class="sd">    :type locacion: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">identificacion</span><span class="p">,</span> <span class="n">fecha</span><span class="p">,</span> <span class="n">hora</span><span class="p">,</span> <span class="n">magnitud</span><span class="p">,</span> <span class="n">profundidad</span><span class="p">,</span> <span class="n">locacion</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">identificacion</span> <span class="o">=</span> <span class="n">identificacion</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fecha</span> <span class="o">=</span> <span class="n">fecha</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hora</span> <span class="o">=</span> <span class="n">hora</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">magnitud</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">magnitud</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">profundidad</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">profundidad</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">locacion</span> <span class="o">=</span> <span class="n">locacion</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">intensidad</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vector</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="Sismo.fix_fechaError">
+<a class="viewcode-back" href="../main.html#main.Sismo.fix_fechaError">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fix_fechaError</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Corrige el formato de la fecha si el mes tiene un cero a la izquierda.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fecha</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;0&quot;</span><span class="p">:</span>
+            <span class="n">posicion</span> <span class="o">=</span> <span class="mi">5</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fecha</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">posicion</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">fecha</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fecha</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">posicion</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fecha</span><span class="p">[</span><span class="n">posicion</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span></div>
+
+
+<div class="viewcode-block" id="Sismo.calcular_intensidad">
+<a class="viewcode-back" href="../main.html#main.Sismo.calcular_intensidad">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">calcular_intensidad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calcula la intensidad del sismo como magnitud/profundidad.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">intensidad</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">magnitud</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">profundidad</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">intensidad</span> <span class="o">+=</span> <span class="nb">round</span><span class="p">(</span><span class="n">intensidad</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Sismo.buscar_por_fecha">
+<a class="viewcode-back" href="../main.html#main.Sismo.buscar_por_fecha">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">buscar_por_fecha</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">anio</span><span class="p">,</span> <span class="n">mes</span><span class="p">,</span> <span class="n">dia</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Verifica si el sismo ocurrió en una fecha específica.</span>
+
+<span class="sd">        :param anio: Año a buscar</span>
+<span class="sd">        :type anio: int</span>
+<span class="sd">        :param mes: Mes a buscar</span>
+<span class="sd">        :type mes: int</span>
+<span class="sd">        :param dia: Día a buscar</span>
+<span class="sd">        :type dia: int</span>
+<span class="sd">        :return: True si la fecha coincide, False en caso contrario</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fix_fechaError</span><span class="p">()</span>
+        <span class="n">fecha</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{0}</span><span class="s2">-</span><span class="si">{1}</span><span class="s2">-</span><span class="si">{2}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">anio</span><span class="p">,</span> <span class="n">mes</span><span class="p">,</span> <span class="n">dia</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">fecha</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">fecha</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Devuelve una representación en cadena del sismo.</span>
+
+<span class="sd">        :return: Representación legible del sismo</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;A las </span><span class="si">{0}</span><span class="s2">, se registró un sismo de magnitud </span><span class="si">{1}</span><span class="s2"> en escala Richter y profundidad </span><span class="si">{2}</span><span class="s2"> km en </span><span class="si">{3}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">hora</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnitud</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">profundidad</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">locacion</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Sismo.hacer_vector">
+<a class="viewcode-back" href="../main.html#main.Sismo.hacer_vector">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">hacer_vector</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Crea un vector con los datos principales del sismo.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fix_fechaError</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fecha</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hora</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">magnitud</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">profundidad</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calcular_intensidad</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">intensidad</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locacion</span><span class="p">)</span></div>
+
+
+    <span class="c1"># Métodos GET con docstrings</span>
+
+<div class="viewcode-block" id="Sismo.get_fecha">
+<a class="viewcode-back" href="../main.html#main.Sismo.get_fecha">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_fecha</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: Fecha del sismo</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fecha</span></div>
+
+
+<div class="viewcode-block" id="Sismo.get_hora">
+<a class="viewcode-back" href="../main.html#main.Sismo.get_hora">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_hora</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: Hora del sismo</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">hora</span></div>
+
+
+<div class="viewcode-block" id="Sismo.get_magnitud">
+<a class="viewcode-back" href="../main.html#main.Sismo.get_magnitud">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_magnitud</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: Magnitud del sismo</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">magnitud</span></div>
+
+
+<div class="viewcode-block" id="Sismo.get_profundidad">
+<a class="viewcode-back" href="../main.html#main.Sismo.get_profundidad">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_profundidad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: Profundidad del sismo</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">profundidad</span></div>
+
+
+<div class="viewcode-block" id="Sismo.get_locacion">
+<a class="viewcode-back" href="../main.html#main.Sismo.get_locacion">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_locacion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: Locación del sismo</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">locacion</span></div>
+
+
+<div class="viewcode-block" id="Sismo.get_intensidad">
+<a class="viewcode-back" href="../main.html#main.Sismo.get_intensidad">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_intensidad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: Intensidad calculada del sismo</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calcular_intensidad</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">intensidad</span></div>
+
+
+<div class="viewcode-block" id="Sismo.get_vector">
+<a class="viewcode-back" href="../main.html#main.Sismo.get_vector">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_vector</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: Vector con la información del sismo</span>
+<span class="sd">        :rtype: list</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hacer_vector</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">vector</span></div>
+</div>
+
+
+
+
+<span class="c1">#___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___</span>
+
+
+<div class="viewcode-block" id="Lector">
+<a class="viewcode-back" href="../main.html#main.Lector">[documentos]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Lector</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Clase encargada de leer archivos de sismos, procesar sus datos y brindar estadísticas.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor que inicializa los vectores y el promedio de intensidades.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vector_sismos</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vector_intensidades</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">promedio_intensidades</span> <span class="o">=</span> <span class="mi">0</span>
+
+<div class="viewcode-block" id="Lector.solicitar_numero">
+<a class="viewcode-back" href="../main.html#main.Lector.solicitar_numero">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">solicitar_numero</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mensaje</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Solicita al usuario un número entero válido mayor o igual a cero.</span>
+
+<span class="sd">        :param mensaje: Texto que se mostrará al usuario como mensaje de entrada</span>
+<span class="sd">        :type mensaje: str</span>
+<span class="sd">        :return: Número ingresado por el usuario</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">numero_valido</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">numero_valido</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="n">mensaje</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">numero</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese un número correcto.&quot;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">numero</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Por favor ingrese un número válido.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Lector.abrir_archivo">
+<a class="viewcode-back" href="../main.html#main.Lector.abrir_archivo">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">abrir_archivo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Solicita al usuario el nombre del archivo y lo abre.</span>
+
+<span class="sd">        :return: Archivo abierto en modo lectura</span>
+<span class="sd">        :rtype: _io.TextIOWrapper</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">datoValido</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">datoValido</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">nombre</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingrese el nombre del archivo: &quot;</span><span class="p">)</span>
+                <span class="n">archivo</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">nombre</span> <span class="o">+</span> <span class="s2">&quot;.tsv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+                <span class="n">datoValido</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Por favor ingrese un nombre de archivo válido.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">archivo</span></div>
+
+
+<div class="viewcode-block" id="Lector.crear_vector">
+<a class="viewcode-back" href="../main.html#main.Lector.crear_vector">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">crear_vector</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">archivo</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Crea el vector de objetos Sismo a partir del archivo abierto.</span>
+
+<span class="sd">        :param archivo: Archivo abierto que contiene los datos de los sismos</span>
+<span class="sd">        :type archivo: _io.TextIOWrapper</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">vector_base</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">linea</span> <span class="ow">in</span> <span class="n">archivo</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">str</span><span class="o">.</span><span class="n">isdigit</span><span class="p">(</span><span class="n">linea</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+                <span class="n">vector_base</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">linea</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+        <span class="n">locacion</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">sismo</span> <span class="ow">in</span> <span class="n">vector_base</span><span class="p">:</span>
+            <span class="n">elementos_xvector</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sismo</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">posicion</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">elementos_xvector</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">posicion</span> <span class="o">!=</span> <span class="p">(</span><span class="n">elementos_xvector</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                    <span class="n">locacion</span> <span class="o">+=</span> <span class="n">sismo</span><span class="p">[</span><span class="n">posicion</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">locacion</span> <span class="o">+=</span> <span class="n">sismo</span><span class="p">[</span><span class="n">posicion</span><span class="p">]</span>
+
+            <span class="n">sismo_obj</span> <span class="o">=</span> <span class="n">Sismo</span><span class="p">(</span><span class="n">sismo</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sismo</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sismo</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">sismo</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">sismo</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">locacion</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vector_sismos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sismo_obj</span><span class="p">)</span>
+            <span class="n">locacion</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Lector.retornar_max_sismo">
+<a class="viewcode-back" href="../main.html#main.Lector.retornar_max_sismo">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">retornar_max_sismo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">archivo</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Busca el sismo de mayor intensidad para una fecha específica ingresada por el usuario.</span>
+
+<span class="sd">        :param archivo: Archivo con los datos de los sismos</span>
+<span class="sd">        :type archivo: _io.TextIOWrapper</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">vector_fecha</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">vector_intensidades</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">crear_vector</span><span class="p">(</span><span class="n">archivo</span><span class="p">)</span>
+
+        <span class="n">anio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">solicitar_numero</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Ingrese año: &quot;</span><span class="p">)</span>
+        <span class="n">mes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">solicitar_numero</span><span class="p">(</span><span class="s2">&quot;Ingrese mes: &quot;</span><span class="p">)</span>
+        <span class="n">dia</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">solicitar_numero</span><span class="p">(</span><span class="s2">&quot;Ingrese día: &quot;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">sismo</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vector_sismos</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">sismo</span><span class="o">.</span><span class="n">buscar_por_fecha</span><span class="p">(</span><span class="n">anio</span><span class="p">,</span> <span class="n">mes</span><span class="p">,</span> <span class="n">dia</span><span class="p">):</span>
+                <span class="n">vector_fecha</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sismo</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">vector_fecha</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">posicion</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vector_fecha</span><span class="p">)):</span>
+                <span class="k">for</span> <span class="n">sismo</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vector_sismos</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">sismo</span> <span class="o">==</span> <span class="n">vector_fecha</span><span class="p">[</span><span class="n">posicion</span><span class="p">]:</span>
+                        <span class="n">intensity</span> <span class="o">=</span> <span class="n">sismo</span><span class="o">.</span><span class="n">get_intensidad</span><span class="p">()</span>
+                        <span class="n">vector_intensidades</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intensity</span><span class="p">)</span>
+                <span class="n">posicion</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="n">maxima</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">vector_intensidades</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">contador</span><span class="p">,</span> <span class="n">intensidad</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vector_intensidades</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">intensidad</span> <span class="o">==</span> <span class="n">maxima</span><span class="p">:</span>
+                    <span class="n">vector_final</span> <span class="o">=</span> <span class="n">vector_fecha</span><span class="p">[</span><span class="n">contador</span><span class="p">]</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">vector_final</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No hay sismos registrados para ese día&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Lector.calcular_promedio">
+<a class="viewcode-back" href="../main.html#main.Lector.calcular_promedio">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">calcular_promedio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">archivo</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calcula el promedio de la intensidad de todos los sismos registrados en el archivo.</span>
+
+<span class="sd">        :param archivo: Archivo con los datos de los sismos</span>
+<span class="sd">        :type archivo: _io.TextIOWrapper</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">crear_vector</span><span class="p">(</span><span class="n">archivo</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">sismo</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vector_sismos</span><span class="p">:</span>
+            <span class="n">intensity</span> <span class="o">=</span> <span class="n">sismo</span><span class="o">.</span><span class="n">get_intensidad</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vector_intensidades</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">intensity</span><span class="p">)</span>
+
+        <span class="n">acumulado</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vector_intensidades</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">promedio_intensidades</span> <span class="o">+=</span> <span class="n">acumulado</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vector_intensidades</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Lector.menu">
+<a class="viewcode-back" href="../main.html#main.Lector.menu">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">menu</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Muestra el menú principal y solicita al usuario una opción válida.</span>
+
+<span class="sd">        :return: Opción seleccionada por el usuario</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">numero_valido</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">numero_valido</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Seleccione la opción que desea realizar:</span><span class="se">\n</span><span class="s2">&quot;</span>
+                      <span class="s2">&quot;1. Más fuerte de un día.</span><span class="se">\n</span><span class="s2">&quot;</span>
+                      <span class="s2">&quot;2. Intensidad promedio.</span><span class="se">\n</span><span class="s2">&quot;</span>
+                      <span class="s2">&quot;0. Salir.&quot;</span><span class="p">)</span>
+                <span class="n">opcion</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Opción: &quot;</span><span class="p">))</span>
+                <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">opcion</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">opcion</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Por favor digite una opción válida.&quot;</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Por favor ingrese una opción válida&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Lector.controlador">
+<a class="viewcode-back" href="../main.html#main.Lector.controlador">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">controlador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Controlador principal del programa. Administra el flujo de interacción con el usuario.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">detener</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">archivo</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">abrir_archivo</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calcular_promedio</span><span class="p">(</span><span class="n">archivo</span><span class="p">)</span>
+
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">detener</span><span class="p">:</span>
+            <span class="n">opcion</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">menu</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">opcion</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">retornar_max_sismo</span><span class="p">(</span><span class="n">archivo</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">opcion</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">promedio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_promedio</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">promedio</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">opcion</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">detener</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Gracias por utilizar mi programa!&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Lector.get_vector_sismos">
+<a class="viewcode-back" href="../main.html#main.Lector.get_vector_sismos">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_vector_sismos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: Vector con objetos de tipo Sismo leídos desde el archivo</span>
+<span class="sd">        :rtype: list</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">archivo</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">abrir_archivo</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">crear_vector</span><span class="p">(</span><span class="n">archivo</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">vector_sismos</span></div>
+
+
+<div class="viewcode-block" id="Lector.get_promedio">
+<a class="viewcode-back" href="../main.html#main.Lector.get_promedio">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_promedio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: Cadena con el promedio de intensidades de los sismos</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;La intensidad promedio de los sismos registrados es </span><span class="si">{}</span><span class="s2"> grados/km&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="nb">round</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">promedio_intensidades</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="main">
+<a class="viewcode-back" href="../main.html#main.main">[documentos]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Función principal del programa.</span>
+
+<span class="sd">    Se encarga de iniciar la ejecución del sistema sismológico,</span>
+<span class="sd">    creando una instancia de la clase `Lector` y llamando al controlador</span>
+<span class="sd">    principal para gestionar el flujo del programa.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;BIENVENIDO A LA RED SISMOLÓGICA NACIONAL</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">lectura</span> <span class="o">=</span> <span class="n">Lector</span><span class="p">()</span>
+    <span class="n">lectura</span><span class="o">.</span><span class="n">controlador</span><span class="p">()</span></div>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Analizador de archivos sismologicos</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">src</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Código de módulo</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Kristhel Quesada.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

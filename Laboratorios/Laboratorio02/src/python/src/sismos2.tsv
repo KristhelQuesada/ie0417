@@ -1,0 +1,155 @@
+ID	FECHA	HORA	MAGNITUD	PROFUNDIDAD	LOCACION
+#Datos de los sismos: ID-FECHA-HORA-MAGNITUD-PROFUNDIDAD-LOCACION
+12095	2021-07-29	01:43	3.8	13.0	Conchal, Guanacaste
+12093	2021-07-28	15:26	3.8	17.5	Cabo Velas, Guanacaste
+12088	2021-07-28	09:10	2.8	44.6	Quepos
+12094	2021-07-28	08:39	2.5	10.3	Ujarras, Buenos Aires
+12087	2021-07-28	06:37	2.7	57.0	Barranca, Puntarenas
+12086	2021-07-28	05:46	3.3	15.0	Laurel, Corredores
+12092	2021-07-28	02:24	3.1	15.9	Cobano, Puntarenas
+12091	2021-07-27	23:57	3.1	15.6	Jaco, Garabito
+12085	2021-07-27	23:49	3.3	20.0	Jaco, Garabito
+12090	2021-07-27	23:43	3.1	3.0	Lepanto, Puntarenas
+12084	2021-07-27	21:00	3.8	121.0	Managua, Nicaragua
+12082	2021-07-27	18:00	3.4	18.6	Parrita, Puntarenas
+12089	2021-07-27	16:03	2.5	14.3	San Miguel, Desamparados
+12071	2021-07-27	15:22	3.1	5.3	Cairo, Siquirres
+12070	2021-07-27	14:30	3.9	79.0	Carrizal, Alajuela
+12083	2021-07-27	11:11	3.0	59.4	San Juan del Sur, Nicaragua
+12069	2021-07-27	09:24	3.0	6.0	Cabo Velas, Guanacaste
+12081	2021-07-27	09:14	2.8	14.7	Puerto Armuelles, Panama
+12068	2021-07-27	08:27	3.1	16.0	Jaco, Garabito
+12065	2021-07-27	07:58	3.6	21.0	Jaco, Garabito
+12067	2021-07-27	07:32	3.0	8.0	Jaco, Garabito
+12066	2021-07-27	06:57	3.0	3.0	Cobano, Puntarenas
+12064	2021-07-27	06:37	4.4	23.0	Jaco, Garabito
+12080	2021-07-27	05:36	2.7	17.2	Pittier, Coto Brus
+12079	2021-07-27	05:15	2.0	4.7	Paraiso, Cartago
+12078	2021-07-27	03:10	3.8	15.0	Punta Burica, Panama
+#Aunque es en Nicaragua, se sienten en Costa Rica
+12077	2021-07-26	19:08	3.5	20.0	Leon, Nicaragua
+12063	2021-07-26	17:34	3.7	35.0	Piedades de Santa Ana
+#Mucha actividad se registra en Panama
+12062	2021-07-26	17:09	3.5	8.0	Puerto Armuelles, Panama
+12061	2021-07-26	16:08	3.9	7.0	Puerto Armuelles, Panama
+12060	2021-07-26	15:23	3.4	6.9	Puerto Armuelles, Panama
+12076	2021-07-26	14:59	3.0	8.0	Puerto Armuelles, Panama
+12059	2021-07-26	14:28	3.5	7.2	Puerto Armuelles, Panama
+12058	2021-07-26	13:46	3.9	23.2	San Juan del Sur, Nicaragua
+12075	2021-07-26	13:11	2.7	3.7	Cobano, Puntarenas
+12055	2021-07-26	09:40	3.7	10.3	Cobano, Puntarenas
+12074	2021-07-26	08:19	3.8	14.9	Punta Burica, Panama
+12057	2021-07-26	07:24	3.1	26.5	Nicoya, Guanacaste
+12054	2021-07-26	06:27	3.2	12.3	Sixaola, Talamanca
+12056	2021-07-26	06:12	2.3	20.1	San Isidro, Leon Cortes
+12053	2021-07-26	05:29	3.7	14.0	Puerto Carillo, Hojancha
+12073	2021-07-26	04:22	3.4	8.7	Punta Burica, Panama
+12072	2021-07-26	03:55	2.3	6.7	San Jose
+12051	2021-07-26	03:47	4.1	5.9	Punta Burica, Panama
+12050	2021-07-25	19:02	2.8	6.0	Santa Cruz, Turrialba
+12046	2021-07-25	13:46	4.1	19.0	Paso Canoas, Corredores
+12045	2021-07-25	09:08	3.3	14.4	Piedras Blancas, Osa
+12049	2021-07-25	06:43	3.4	173.9	Penas Blancas, La Cruz
+12044	2021-07-25	06:40	3.4	77.0	Sto Domingo, Heredia
+12048	2021-07-25	05:47	3.1	53.0	Turrialba, Cartago
+12047	2021-07-25	05:23	3.5	28.0	Volcan, Buenos Aires
+12043	2021-07-25	01:07	3.5	15.0	Puerto Armuelles, Panama
+12042	2021-07-25	00:41	4.6	35.1	San Juan del Sur, Nicaragua
+12041	2021-07-25	00:03	4.8	3.0	San Juan del Sur, Nicaragua
+12039	2021-07-24	22:56	3.6	48.0	Quepos
+12038	2021-07-24	08:26	3.0	16.5	Jaco, Garabito
+12037	2021-07-24	08:21	2.8	23.0	Jaco, Garabito
+12036	2021-07-24	06:37	3.0	19.0	Jaco, Garabito
+12035	2021-07-24	05:25	4.4	51.0	Managua, Nicaragua
+12033	2021-07-24	04:51	4.3	32.0	Leon, Nicaragua
+12032	2021-07-24	03:58	2.7	17.0	San Cristobal, Desamparados
+12031	2021-07-23	22:14	3.9	15.0	Leon, Nicaragua
+12030	2021-07-23	20:03	4.4	29.0	La Cuesta, Corredores
+12029	2021-07-23	19:59	3.3	76.0	San Juan del Sur, Nicaragua
+12028	2021-07-23	10:24	3.0	11.3	Fortuna, Bagaces
+12027	2021-07-23	01:59	3.2	7.0	Puerto Armuelles, Panama
+12026	2021-07-22	23:36	2.5	9.0	San Miguel, Desamparados
+12025	2021-07-22	21:08	3.6	3.0	Punta Burica, Panama
+12000	2021-07-22	13:33	3.2	15.0	Puerto Armuelles, Panama
+11998	2021-07-22	13:25	4.3	13.0	Punta Burica, Panama
+11993	2021-07-22	12:51	5.4	12.0	Punta Burica, Panama
+12018	2021-07-22	12:13	3.5	15.0	Punta Burica, Panama
+11995	2021-07-22	12:04	3.4	23.0	Puerto Armuelles, Panama
+12023	2021-07-22	11:42	2.8	19.3	Paquera, Puntarenas
+11996	2021-07-22	10:16	2.8	19.0	Zapotal, Nandayure
+12020	2021-07-22	10:13	3.4	18.2	Punta Burica, Panama
+11992	2021-07-22	07:44	4.1	17.8	Punta Burica, Panama
+12022	2021-07-22	07:29	3.4	30.7	Punta Burica, Panama
+12021	2021-07-22	05:03	3.7	6.0	Punta Burica, Panama
+11999	2021-07-22	04:51	4.0	27.9	Punta Burica, Panama
+12019	2021-07-22	04:37	3.2	20.0	Punta Burica, Panama
+11991	2021-07-22	02:51	4.3	14.9	Punta Burica, Panama
+11990	2021-07-22	02:16	3.9	26.0	Managua, Nicaragua
+12016	2021-07-22	02:07	3.3	3.0	Punta Burica, Panama
+12015	2021-07-22	02:05	3.9	27.6	Punta Burica, Panama
+11989	2021-07-22	01:35	4.5	3.0	Managua, Nicaragua
+11988	2021-07-22	01:28	5.5	69.6	Managua, Nicaragua
+11985	2021-07-22	01:09	4.2	21.9	Punta Burica, Panama
+11987	2021-07-22	00:33	3.9	10.0	Punta Burica, Panama
+11986	2021-07-22	00:26	2.5	32.6	Agua Buena, Coto Brus
+12014	2021-07-21	23:21	3.7	13.5	Punta Burica, Panama
+12013	2021-07-21	23:09	3.2	20.0	Punta Burica, Panama
+12012	2021-07-21	23:07	3.7	12.0	Punta Burica, Panama
+12011	2021-07-21	23:01	3.8	15.6	Punta Burica, Panama
+12010	2021-07-21	22:57	3.4	22.1	Punta Burica, Panama
+12009	2021-07-21	22:52	3.9	13.0	Punta Burica, Panama
+12008	2021-07-21	22:47	3.7	13.0	Punta Burica, Panama
+11978	2021-07-21	22:26	4.4	31.2	Chacarita, Puntarenas
+11980	2021-07-21	22:25	4.9	4.0	Punta Burica, Panama
+12007	2021-07-21	22:23	3.5	5.3	Punta Burica, Panama
+12006	2021-07-21	22:21	3.5	3.0	David, Panama
+11979	2021-07-21	22:20	3.0	30.0	Isla de Chira, Puntarenas
+12024	2021-07-21	22:19	3.5	20.0	Samara, Nicoya
+12005	2021-07-21	22:10	3.9	12.9	Punta Burica, Panama
+12004	2021-07-21	22:06	3.8	3.0	Punta Burica, Panama
+11977	2021-07-21	21:34	4.3	9.5	Punta Burica, Panama
+12003	2021-07-21	21:29	4.1	19.7	Punta Burica, Panama
+12002	2021-07-21	21:25	3.9	11.0	Punta Burica, Panama
+12001	2021-07-21	21:19	4.2	15.0	Punta Burica, Panama
+11976	2021-07-21	21:15	7.0	12.0	Punta Burica, Panama
+12017	2021-07-21	17:50	2.7	96.6	Varablanca, Heredia
+11968	2021-07-21	13:06	3.5	83.3	Leon, Nicaragua
+11966	2021-07-21	10:56	4.0	36.3	San Isidro, Leon Cortes
+11965	2021-07-21	10:37	3.7	27.6	Santa Maria de Dota
+11967	2021-07-21	10:25	2.3	9.0	San Miguel, Desamparados
+11964	2021-07-21	10:18	3.0	10.0	San Miguel, Desamparados
+11969	2021-07-21	09:28	2.7	41.8	Barbacoas, Puriscal
+11970	2021-07-21	06:35	2.2	34.2	Rivas de Perez Zeledon
+11963	2021-07-21	05:49	3.1	6.0	Rivas de Perez Zeledon
+11962	2021-07-21	05:33	3.9	132.0	San Rafael, Guatuso
+11973	2021-07-21	05:25	2.6	20.6	Chacarita, Buenos Aires
+11972	2021-07-21	05:02	3.5	15.0	San Juan del Sur, Nicaragua
+11984	2021-07-21	04:32	3.1	15.0	Barra Colorado, Pococi
+11983	2021-07-21	04:02	3.4	15.0	Tilaran, Guanacaste
+11975	2021-07-21	02:54	2.9	20.0	El Amparo, Los Chiles
+11974	2021-07-21	02:53	3.6	20.0	Cabo Velas, Guanacaste
+11960	2021-07-21	01:52	2.4	11.3	Copey de Dota
+11971	2021-07-21	01:44	2.1	46.8	Puerto Cortes, Osa
+11961	2021-07-21	01:33	2.1	7.7	San Miguel, Desamparados
+11982	2021-07-21	01:03	3.2	185.6	Delta San Juan, Nicaragua
+11981	2021-07-21	01:01	3.0	15.0	San Carlos, Nicaragua
+11956	2021-07-21	00:14	2.7	8.6	San Miguel, Desamparados
+11957	2021-07-21	00:11	3.4	15.0	Punta Burica, Panama
+11958	2021-07-21	00:07	2.4	10.3	San Miguel, Desamparados
+11959	2021-07-21	00:06	2.4	11.2	San Miguel, Desamparados
+11955	2021-07-20	23:57	4.5	8.9	San Miguel, Desamparados
+11943	2021-07-20	11:48	3.0	35.0	Quebrada Honda, Nicoya
+11942	2021-07-20	10:35	3.1	68.3	San Ramon, Alajuela
+11944	2021-07-20	09:23	3.0	6.0	Volcan, Chiriqui, Panama
+11954	2021-07-20	08:26	2.7	31.4	Puerto Armuelles, Panama
+11953	2021-07-20	04:21	2.6	30.9	Bahia Ballena, Osa
+11952	2021-07-20	03:46	3.1	103.4	Tronadora, Tilaran
+11951	2021-07-20	02:16	2.8	15.0	Dominical, Osa
+#Este es un comentario
+11950	2021-07-19	18:24	4.0	35.7	Isla de Coiba, Panama
+11949	2021-07-19	18:22	4.1	23.8	Punta Burica, Panama
+11948	2021-07-19	17:56	3.0	50.3	Quepos
+11937	2021-07-19	17:27	3.0	47.9	Quepos
+11935	2021-07-19	17:24	3.4	48.0	Quepos
+11936	2021-07-19	17:08	5.0	8.0	Punta Burica, Panama
+11947	2021-07-19	15:47	3.7	11.8	San Lorenzo de Tarrazu
