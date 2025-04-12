@@ -130,5 +130,7 @@
 ## Documentación Automática
 
 ### Doxygen
+La documentación de Doxygen puede encontrarse disponible en: https://ie0417-hashtable.netlify.app/files
 
 ### Sphinx
+La documentación de Sphinx puede encontrarse disponible en: https://ie0417-sismos.netlify.app/main
