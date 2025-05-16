@@ -4,8 +4,7 @@
 
 1. [Máquina expendedora](#1-máquina-expendedora)
 2. [App de bebidas personalizadas (tipo Starbucks)](#2-app-de-bebidas-personalizadas-tipo-starbucks)
-3. [Sistema tipo Pingdom (monitoreo de sitios web)](#3-sistema-tipo-pingdom-monitoreo-de-sitios-web)
-4. [Reflexión](#4-reflexioon)
+3. [Sistema tipo Pingdom con monitoreo de sitios web](#3-sistema-tipo-pingdom-con-monitoreo-de-sitios-web)
 
 <br>
 
@@ -164,22 +163,42 @@ print("Precio:", bebida.costo())  # Precio: 4.8
 <br> </br>
 
 
-## Sistema tipo Pingdom (monitoreo de sitios web)
+## Sistema tipo Pingdom con monitoreo de sitios web
 
 ### Problema
-Diseñar un sistema que monitoree múltiples sitios web según el plan de suscripción del cliente. Cada sitio puede tener diferentes frecuencias de chequeo (cada 30s, 1min, 5min, etc.) y debe notificarse al cliente cuando el sitio se caiga o vuelva a estar disponible. Además, se deben mostrar visualizaciones históricas del estado.
+Pingdom es una herramienta de monitoreo de disponibilidad y rendimiento de sitios web. Su propósito principal es verificar periódicamente que los servicios web se encuentren en línea y funcionando correctamente, alertando a los responsables cuando se detecta una caída o lentitud significativa.
+
+El objetivo es diseñar un sistema que replique las funcionalidades básicas de Pingdom: debe monitorear periódicamente el estado de múltiples sitios web registrados por distintos clientes, cuyos planes de suscripción determinan la frecuencia con la que se realizan los chequeos (por ejemplo, cada 1 minuto, 5 minutos o más). Además, el sistema debe detectar automáticamente cuándo un sitio deja de estar disponible (caída) o vuelve a estar activo, y generar notificaciones en tiempo real hacia los usuarios afectados. Finalmente, toda la información recolectada —como tiempos de respuesta, historial de actividad, frecuencia de caídas— debe poder visualizarse de forma estructurada, como dashboards o reportes detallados. Puede encontrar el enunciado en: [Design Pingdom | System design interview question](https://leetcode.com/discuss/post/5607927/design-pingdom-system-design-interview-q-9yd0/)
 
 ### Patrones propuestos
-- `Observer` – para el sistema de notificaciones
-- `Strategy` – para manejar diferentes frecuencias de monitoreo
-- `Builder` – para construir configuraciones personalizadas de monitoreo por cliente
+- `Observer` 
+- `Strategy` 
+- `Builder`
 
 ### Justificación
-- `Observer`: Permite notificar a distintos subscriptores (clientes, dashboards, logs) cuando cambia el estado del sitio monitoreado.
-- `Strategy`: Facilita la definición de distintas políticas de frecuencia de chequeo según el plan del cliente.
-- `Builder`: Separa la construcción de un objeto complejo (la configuración completa de monitoreo por cliente) de su representación.
+#### `Observer`
 
-Este diseño promueve flexibilidad, escalabilidad y separación de responsabilidades en una arquitectura compleja pero realista.
+> El patrón Observer resulta esencial para desacoplar el sistema de monitoreo del sistema de notificación. Cada vez que se detecta un cambio de estado en un sitio (por ejemplo, al pasar de “activo” a “caído”), el sistema debe notificar a los observadores suscritos, que pueden ser módulos encargados de enviar emails, notificaciones push o registrar eventos para análisis posterior. De esta forma, este patrón es útil ya que:
+> 1. Permite notificar a múltiples módulos (usuarios, logs, sistemas externos) sin acoplarse directamente a ellos.
+> 2. Facilita la incorporación de nuevos canales de alerta sin modificar el núcleo del sistema de monitoreo.
+> 3. Implementa una arquitectura reactiva ante cambios en el estado de los sitios web.
+
+<br>
+
+#### `Strategy`
+
+> El patrón Strategy permite encapsular las diferentes políticas de chequeo que dependen del plan de suscripción del cliente (por ejemplo, chequeos cada 1, 5 o 10 minutos). Cada plan puede definir su propia lógica de temporización, y se puede seleccionar la estrategia adecuada en tiempo de ejecución, según el cliente.
+> 1. Separa el qué hacer del cómo hacerlo, en este caso, separando el proceso de chequeo del intervalo con que se ejecuta.
+> 1. Facilita extender o modificar los algoritmos de planificación sin alterar la lógica del monitor.
+> 1. Mejora la mantenibilidad en sistemas con múltiples niveles de servicio.
+
+<br>
+
+#### `Builder`
+
+> En escenarios donde se necesite crear reportes o dashboards personalizables por el usuario (por ejemplo, seleccionar qué sitios mostrar, rango de fechas, métricas a incluir), el patrón Builder puede emplearse para construir estos objetos complejos paso a paso. De esta forma es útil porque: 
+> 1. Permite configurar reportes de forma flexible y con múltiples combinaciones válidas.
+> 2. Mejora la separación entre la lógica de visualización y el modelo de datos subyacente.
 
 ### Implementación (Python)
 <details>
