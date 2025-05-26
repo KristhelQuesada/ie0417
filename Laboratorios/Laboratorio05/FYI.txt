@@ -1,0 +1,270 @@
+######        #    #    #     #  #####  #######
+#     #       #   # #   ##    # #     # #     #
+#     #       #  #   #  # #   # #       #     #
+#     #       # #     # #  #  # #  #### #     #
+#     # #     # ####### #   # # #     # #     #
+#     # #     # #     # #    ## #     # #     #
+######   #####  #     # #     #  #####  #######
+
+-----------------------------------------------
+PRIMER PROYECTO (DJANGO SETUP)
+-----------------------------------------------
+1. Verificar las dependencias
+	python3 --version
+	pip --version
+	psql --version
+	
+	Debido a que psql no estaba instalado entonces se ejecuta:
+	sudo apt update
+	sudo apt install postgresql postgresql-contrib
+
+
+
+2. Crear el proyecto de Django
+	- Crear y activar un entorno virtual
+	  python3 -m venv env
+	  source env/bin/activate
+	  
+	- Instalar Django y el Adaptador de PostgreSQL
+	  pip install django psycopg2-binary
+
+	- Crear el proyecto Django
+	  django-admin startproject notas_project
+	  cd notas_project
+	  
+	- Crear una app para las Notas
+	  python manage.py startapp notas
+	  
+
+
+3. Configurar la base de datos en PostgreSQL
+	- Crear la DB y el usuario en PostgreSQL
+	  sudo -u postgres psql
+	  
+	- Dentro de la consola de PostgreSQL
+	  CREATE DATABASE notas_db;
+	  CREATE USER notas_user WITH PASSWORD '123';
+	  ALTER ROLE notas_user SET client_encoding TO 'utf8';
+	  ALTER ROLE notas_user SET default_transaction_isolation TO 'read committed';
+	  ALTER ROLE notas_user SET timezone TO 'UTC';
+	  GRANT ALL PRIVILEGES ON DATABASE notas_db TO notas_user;
+	  \q
+	  
+	- Configurar la conexión en Django
+	  En el archivo notas_project/settings.py, modifica la sección DATABASES para que coincida con la configuración de tu base de datos:
+	  
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'notas_db',
+        'USER': 'notas_user',
+        'PASSWORD': '123',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
+
+4. Definir el modelo de notas
+	- Crear el modelo
+	  En el archivo notas/models.py
+
+from django.db import models
+
+class Nota(models.Model):
+    titulo = models.CharField(max_length=100)
+    contenido = models.TextField()
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.titulo
+
+	- Registrar la aplicacion y el modelo
+	  Agrega 'notas' a la lista INSTALLED_APPS en notas_project/settings.py
+	  
+INSTALLED_APPS = [
+    # ...
+    'notas',
+]
+
+          Registra el modelo en el archivo notas/admin.py
+from django.contrib import admin
+from .models import Nota
+
+admin.site.register(Nota)
+
+
+
+
+5. Aplicar migraciones y crear superusuario
+	- Aplicar migraciones
+	  python manage.py makemigrations
+	  python manage.py migrate
+	  
+	- Crear un superusuario
+	  python manage.py createsuperuser
+	  user: krisss
+	  email: kristhel.quesada@ucr.ac.cr
+	  pswd: 123vm
+
+6. Ejecuta el servidor de desarrollo
+	- python manage.py runserver
+	
+
+[EXTRA]
+1. Como me salgo del entorno virtual?
+   deactivate
+   
+2. Cómo borro el entorno virtual?
+   deactivate
+   rm -rf env
+
+3. Cómo listo mis entornos virtuales?
+   find ~ -type d \( -name "env" -o -name ".venv" -o -name "venv" \)
+   
+
+
+7. Crear Vistas y Plantillas para la Aplicación de Notas
+	- Crear vistas en notas/views.py
+	- Crear formularios en notas/forms.py
+	- Configurar urls en notas/urls.py (crear) y en notas_project/urls.py
+	- Crear los templates: Crear un directorio notas/templates/notas con los archivos lista_notas.html y crear_nota.html
+	
+--------------- ESTRUCTURA A ESTE PUNTO ---------------
+notas_project/
+├── notas/
+│   ├── templates/
+│   │   ├── crear_nota.html
+│   │   └── lista_notas.html
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── forms.py
+├── notas_project/
+│   ├── settings.py
+│   ├── urls.py
+-------------------------------------------------------
+
+8. Probas el server nuevamente: python manage.py runserver
+
+
+
+
+######  #######  #####  #    #  ####### ######
+#     # #     # #     # #   #   #       #     #
+#     # #     # #       #  #    #       #     #
+#     # #     # #       ###     #####   ######
+#     # #     # #       #  #    #       #   #
+#     # #     # #     # #   #   #       #    #
+######  #######  #####  #    #  ####### #     #
+-----------------------------------------------
+PRIMER PROYECTO (DOCKER SETUP)
+-----------------------------------------------
+
+1. Crear el archivo .env en la raiz del proyecto
+
+POSTGRES_DB=notas_db
+POSTGRES_USER=notas_user
+POSTGRES_PASSWORD=notas_pass
+DB_HOST=db
+DB_PORT=5432
+
+
+
+2. Crear Dockerfile para Django en la raiz del proyecto
+
+
+3. Crear docker-compose.yml
+
+
+4. Ajustar settings.py en Django
+
+import os
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('POSTGRES_DB'),
+        'USER': os.getenv('POSTGRES_USER'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
+    }
+}
+
+5. Crear requirements.txt
+	pip freeze > requirements.txt
+
+6. Agregar el script de wait-for-it.sh para evitar conflictos
+	> Traer el script
+	curl -o wait-for-it.sh https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh
+	chmod +x wait-for-it.sh
+	
+	> Insertar su uso en el Dockerfile
+	COPY wait-for-it.sh /wait-for-it.sh
+	RUN chmod +x /wait-for-it.sh
+	
+	> En el docker-compose
+	command: sh -c "/wait-for-it.sh db:5432 -t 60 -- python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+
+
+--------------- ESTRUCTURA A ESTE PUNTO ---------------
+notas_project/
+├── Dockerfile
+├── docker-compose.yml
+├── .env
+├── manage.py
+├── requirements.txt
+├── notas_project/       # Carpeta del proyecto Django
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── notas/                         # Carpeta de la app
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── migrations/
+│   │   └── 0001_initial.py
+│   ├── models.py
+│   ├── templates/
+│   │   └── notas/
+│   │       ├── lista_notas.html
+│   │       └── crear_nota.html
+│   ├── tests.py
+│   └── views.py
+
+
+6. Probando que todo funciona
+	docker compose up --build
+	CTRL + C
+	docker-compose down
+	docker compose up --build
+	
+	
+
+7. Generando la imagen
+	> Exportar
+	mkdir init (en el directorio base)
+	docker exec -t postgres_nota pg_dump -U notas_user notas_db > init/dump_notas.sql
+	
+	> Ejecutar
+	docker ps			( en caso de error con el daemon)
+	docker start <docker_name>      ( en caso de error con el daemon)
+	docker compose up --build
+	
+8. Se observó que la DB no se cargaba correctamente, entonces se hace un entrypoint
+	a. Se agrega la siguiente linea al .yml
+
+services:
+  db:
+    image: postgres:14
+    container_name: postgres_nota
+    env_file:
+      - .env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d        <---- esta linea
+    networks:
+      - notas_net

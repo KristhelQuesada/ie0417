@@ -4,7 +4,7 @@
 
 # Descripción
 
-En este laboratorio se estudia Docker, por medio de una aplicación Django con PostgreSQL, en Ubuntu Linux. Para esto, se creó, usando ChatGPT, una aplicación de notas en Django con conexión a PostgreSQL, y se generó el flujo de Docker para desplegar esta aplicación.
+En este laboratorio se estudia Docker, por medio de una aplicación Django con PostgreSQL, en Ubuntu Linux. Para esto, se creó, usando ChatGPT, una aplicación de notas en Django con conexión a PostgreSQL, y se generó el flujo de Docker para desplegar esta aplicación. Adicionalmente, se agrega un archivo FYI.txt que explica los pasos que se realizaron para el setup de Djando y Docker.
 
 Este trabajo fue colaborativo por:
 - Kristhel Quesada López - C06153
