@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Notas</title>
+</head>
+<body>
+    <h1>Notas</h1>
+    <ul>
+        {% for nota in notas %}
+            <li><strong>{{ nota.titulo }}</strong>: {{ nota.contenido }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'crear_nota' %}">Crear nueva nota</a>
+</body>
+</html>
