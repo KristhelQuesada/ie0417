@@ -26,7 +26,7 @@ make run-all
 ```
 
 > [!TIP]
-> Profesor y asistente: Se realizó esta funcionalidad en el Makefile para facilitar la revisión de este laboratorio con un solo comando, por ende se recomienda su uso.
+> Profesor/asistente, se realizó esta funcionalidad en el Makefile para facilitar la revisión de este laboratorio con un solo comando, por ende se recomienda su uso.
 
 ### Compilar todos los programas
 Esto compilará todos los archivos `.cpp` dentro del directorio `src/` y generará ejecutables con el mismo nombre en el directorio raíz del proyecto.
