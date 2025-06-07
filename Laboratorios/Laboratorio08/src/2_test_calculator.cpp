@@ -42,10 +42,11 @@ TEST_F(CalculatorTest, SubstractTest) {
 // Se agrega prueba con assert para observar su comportamiento
 // Se fuerza un errpr con el assert
 // Se espera que el expect no se ejecute por el fallo
-TEST_F(CalculatorTest, FailingTest) {
-    ASSERT_EQ(calc.Add(2, 2), 5);  // Falla porque 2+2 != 5
-    EXPECT_EQ(calc.Substract(2, 1), 1);
-}
+// [Info] Descomente para visualizar el ejemplo
+//TEST_F(CalculatorTest, FailingTest) {
+//    ASSERT_EQ(calc.Add(2, 2), 5);  // Falla porque 2+2 != 5
+//    EXPECT_EQ(calc.Substract(2, 1), 1);
+//}
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
