@@ -44,6 +44,8 @@ g++ -o random_example random_example.cpp
 ./exe
 ```
 
+<br>
+
 #### Ejecutar ejemplos con gtest y gmock
 
 ```bash
