@@ -19,6 +19,7 @@ jobs:
 
       - name: Build and run tests
         run: |
+          cd ie0417/Laboratorios/Laboratorio08/src/
           mkdir build
           cd build
           cmake ..
