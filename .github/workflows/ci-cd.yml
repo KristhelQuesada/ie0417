@@ -13,8 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up CMake
-        uses: lukka/get-cmake@v3.21.2
+      - name: Install CMake (if needed)
+        run: sudo apt-get update && sudo apt-get install -y cmake
+
 
       - name: Build and run tests
         run: |
