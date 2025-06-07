@@ -56,6 +56,7 @@ cmake ..
 make
 ./test_calculator
 ./test_authentication
+```
 
 <br>
 
