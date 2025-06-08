@@ -6,11 +6,17 @@
 
 using ::testing::Return;
 
-// Prueba para el inicio de sesión exitoso
-// Aca podemos ver como el mock simula lo que
-// deberia retornar la base de datos, para ya
-// luego evaluar si la funcionalidad de los
-// metodos de autenticacion funcionan
+// Este archivo demuestra cómo utilizar Google Mock para realizar pruebas unitarias
+// sobre una clase de autenticación sin depender de una base de datos real.
+// En lugar de usar la implementación original de la base de datos, se utiliza un 
+// mock (simulacro) que imita su comportamiento. Esto permite:
+// - Controlar las respuestas de los métodos de la base de datos, simulando distintos escenarios.
+// - Validar que los métodos de autenticación (como login y registerUser) respondan correctamente
+//   según el flujo esperado.
+// - Ejecutar pruebas de forma rápida, aislada y reproducible, sin necesidad de recursos externos.
+// Gracias a los `EXPECT_CALL` se pueden definir los valores que debería retornar el mock (db),
+// y luego verificar si la lógica de autenticación se comporta como se espera ante esos valores.
+
 TEST(AuthenticationTest, LoginSuccess) {
     MockDatabase db;
     Authentication auth(&db);

@@ -4,9 +4,12 @@
 #include <gmock/gmock.h>
 #include "3_database.h"
 
-// Engañamos al sistema, haciendo pasar la base de datos real
-// por mock methods, que heredan las funciones del esquema real
-// de la db
+// Engañamos al sistema simulando que estamos usando una base de datos real,
+// pero en realidad usamos métodos mock que se comportan igual que los reales.
+// Esto nos permite probar la lógica de autenticación sin necesidad de tener
+// una base de datos implementada, ya que el mock hereda la estructura original
+// y nos deja controlar su comportamiento durante las pruebas.
+
 
 class MockDatabase : public Database {
     public:
