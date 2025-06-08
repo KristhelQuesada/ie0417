@@ -10,14 +10,14 @@
 1. [Compilación y Ejecución](#1-compilación-y-ejecución)
 2. [Procedimiento](#2-procedimiento)
 
-    2.1 [Semillas en Software Testing](#2-1-semillas-en-software-testing)
+    2.1 [Semillas en Software Testing](#21-semillas-en-software-testing)
 
-    2.2 [Unit Testing](#2-2-unit-testing)
+    2.2 [Unit Testing](#22-unit-testing)
 
-    2.3 [Functional Testing](#2-3-functional-testing)
+    2.3 [Functional Testing](#23-functional-testing)
 
-    2.4 [GitHub Actions](#2-4-github-actions)
-    
+    2.4 [GitHub Actions](#24-github-actions)
+
 
 ----
 <br>
